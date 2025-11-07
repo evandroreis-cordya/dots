@@ -9,19 +9,9 @@ print_in_purple "
 
 "
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Programming Languages
-execute "brew install python" \
-    "Installing Python"
-
-execute "brew install go" \
-    "Installing Go"
-
-execute "brew install rust" \
-    "Installing Rust"
-
-execute "brew install java" \
-    "Installing Java"
+# Programming languages installation moved to specialized dev_langs/ scripts
+# This prevents duplication and ensures proper language-specific configuration
+print_info "Programming languages installation handled by specialized dev_langs/ scripts"
 
 # Web Frameworks
 execute "pip3 install flask" \
@@ -36,18 +26,9 @@ execute "pip3 install fastapi" \
 execute "pip3 install uvicorn" \
     "Installing Uvicorn"
 
-# Database Tools
-execute "brew install postgresql" \
-    "Installing PostgreSQL"
-
-execute "brew install mysql" \
-    "Installing MySQL"
-
-execute "brew install mongodb-community" \
-    "Installing MongoDB"
-
-execute "brew install redis" \
-    "Installing Redis"
+# Database tools installation moved to specialized script: databasetools.zsh
+# This prevents duplication and ensures comprehensive database configuration
+print_info "Database tools installation handled by specialized script: databasetools.zsh"
 
 # API Development
 execute "pip3 install requests" \

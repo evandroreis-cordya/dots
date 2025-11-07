@@ -9,28 +9,9 @@ print_in_purple "
 
 "
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# LangChain - Framework for developing context-aware reasoning applications
-execute "pip3 install langchain" \
-    "Installing LangChain"
-
-# Auto-GPT - Autonomous GPT-4 experiment
-execute "pip3 install auto-gpt" \
-    "Installing Auto-GPT"
-
-# Agent tooling and frameworks
-execute "pip3 install crewai" \
-    "Installing CrewAI"
-
-execute "pip3 install autogen" \
-    "Installing AutoGen"
-
-# Vector databases for agent memory
-execute "pip3 install chromadb" \
-    "Installing ChromaDB"
-
-execute "pip3 install faiss-cpu" \
-    "Installing FAISS"
+# Core AI frameworks (LangChain, CrewAI, ChromaDB) are now installed by core_ai_tools.zsh
+# This prevents duplication and ensures consistent versions across AI tools
+print_info "Core AI frameworks (LangChain, CrewAI, ChromaDB) handled by core_ai_tools.zsh"
 
 # Tools for agent capabilities
 execute "pip3 install selenium" \
@@ -60,12 +41,9 @@ execute "pip3 install spacy" \
 execute "python3 -m spacy download en_core_web_sm" \
     "Downloading SpaCy English model"
 
-# CrewAI CLI tools and utilities
-execute "pip3 install crewai-tools" \
-    "Installing CrewAI tools"
-
-execute "pip3 install crewai-cli" \
-    "Installing CrewAI CLI"
+# CrewAI CLI tools are now installed by core_ai_tools.zsh
+# This prevents duplication and ensures consistent versions
+print_info "CrewAI CLI tools handled by core_ai_tools.zsh"
 
 # Additional CrewAI tools
 execute "pip3 install serper-dev" \

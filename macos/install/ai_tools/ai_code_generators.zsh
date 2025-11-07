@@ -96,22 +96,9 @@ execute "pip3 install black" \
 execute "pip3 install isort" \
     "Installing isort for Python import sorting"
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Code Generation Frameworks
-execute "pip3 install langchain" \
-    "Installing LangChain for AI applications"
-
-execute "pip3 install langchain-community" \
-    "Installing LangChain Community tools"
-
-execute "pip3 install langchain-openai" \
-    "Installing LangChain OpenAI integration"
-
-execute "pip3 install langchain-anthropic" \
-    "Installing LangChain Anthropic integration"
-
-execute "pip3 install langchain-google-genai" \
-    "Installing LangChain Google Generative AI integration"
+# Core LangChain packages are now installed by core_ai_tools.zsh
+# This prevents duplication and ensures consistent versions across AI tools
+print_info "Core LangChain packages handled by core_ai_tools.zsh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Code Generation Utilities

@@ -48,12 +48,9 @@ else
     print_result $? "Android Studio"
 fi
 
-if brew list --cask | grep -q "wezterm"; then
-    print_success "WezTerm (already installed)"
-else
-    brew install --cask wezterm &> /dev/null
-    print_result $? "WezTerm"
-fi
+# WezTerm installation moved to specialized script: wezterm.zsh
+# This prevents duplication and ensures comprehensive configuration
+print_info "WezTerm installation handled by specialized script: wezterm.zsh"
 
 if brew list --cask | grep -q "docker"; then
     print_success "Docker (already installed)"
@@ -105,27 +102,9 @@ else
     print_result $? "kubectl"
 fi
 
-# Database tools
-if brew list | grep -q "^postgresql@14$"; then
-    print_success "PostgreSQL (already installed)"
-else
-    brew install postgresql@14 &> /dev/null
-    print_result $? "PostgreSQL"
-fi
-
-if brew list | grep -q "^mongodb-community$"; then
-    print_success "MongoDB (already installed)"
-else
-    brew install mongodb-community &> /dev/null
-    print_result $? "MongoDB"
-fi
-
-if brew list | grep -q "^redis$"; then
-    print_success "Redis (already installed)"
-else
-    brew install redis &> /dev/null
-    print_result $? "Redis"
-fi
+# Database tools installation moved to specialized script: databasetools.zsh
+# This prevents duplication and ensures comprehensive database configuration
+print_info "Database tools installation handled by specialized script: databasetools.zsh"
 
 # API Development
 if brew list --cask | grep -q "postman"; then
@@ -165,34 +144,9 @@ else
     print_result $? "Gradle"
 fi
 
-# Programming languages
-if brew list | grep -q "^go$"; then
-    print_success "Go (already installed)"
-else
-    brew install go &> /dev/null
-    print_result $? "Go"
-fi
-
-if brew list | grep -q "^python@3.11$"; then
-    print_success "Python (already installed)"
-else
-    brew install python@3.11 &> /dev/null
-    print_result $? "Python"
-fi
-
-if brew list | grep -q "^ruby$"; then
-    print_success "Ruby (already installed)"
-else
-    brew install ruby &> /dev/null
-    print_result $? "Ruby"
-fi
-
-if brew list | grep -q "^rust$"; then
-    print_success "Rust (already installed)"
-else
-    brew install rust &> /dev/null
-    print_result $? "Rust"
-fi
+# Programming languages installation moved to specialized dev_langs/ scripts
+# This prevents duplication and ensures proper language-specific configuration
+print_info "Programming languages installation handled by specialized dev_langs/ scripts"
 
 # Shell tools
 if brew list | grep -q "^tmux$"; then

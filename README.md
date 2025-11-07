@@ -289,6 +289,36 @@ All configuration files are stored in `$HOME/dotfiles/macos/configs/shell/zsh_co
 
 Feel free to send suggestions, corrections, and feedback. I'll accept pull requests that add value to the project, as long as they're constructive and respectful.
 
+## Duplicate Prevention System
+
+This project includes a centralized tool registry system to prevent duplicate installations across different scripts:
+
+### Tool Registry Features
+- **Conflict Detection**: Automatically detects when tools are installed in multiple scripts
+- **Centralized Management**: Single source of truth for all tool installations
+- **Dependency Tracking**: Tracks tool categories and installation methods
+- **Resolution System**: Provides tools to resolve conflicts between scripts
+
+### Registry Functions
+- `register_tool()` - Register a tool installation
+- `check_tool_conflict()` - Detect duplicate installations
+- `resolve_tool_conflict()` - Handle conflicts between scripts
+- `list_registered_tools()` - View all registered tools
+- `list_conflicts()` - View any detected conflicts
+
+### Script Organization
+- **Specialized Scripts**: Comprehensive installation + configuration (e.g., `wezterm.zsh`)
+- **General Scripts**: Basic installation only, no configuration
+- **Core Scripts**: Shared dependencies (e.g., `core_ai_tools.zsh`)
+
+### Recent Changes
+- ✅ Removed duplicate WezTerm installations (kept comprehensive `wezterm.zsh`)
+- ✅ Consolidated communication tools into flexible `communication_tools.zsh`
+- ✅ Created `core_ai_tools.zsh` for shared AI package dependencies
+- ✅ Removed duplicate programming language installations from general scripts
+- ✅ Removed duplicate database tool installations
+- ✅ Merged communication tools with simple/comprehensive modes
+
 ## Installation Instructions
 
 ### macOS Installation

@@ -5,8 +5,8 @@ SCRIPT_DIR=${0:a:h}
 source "${SCRIPT_DIR}/../../utils.zsh"
 source "${SCRIPT_DIR}/utils.zsh"
 
-# Enable nullglob to handle the case where there are no matches for a glob pattern
-setopt nullglob
+# Source tool registry for duplicate prevention
+source "${SCRIPT_DIR}/utils/tool_registry.zsh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Function to create a framed header with script information

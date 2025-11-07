@@ -67,21 +67,9 @@ pip_install "Accelerate" "accelerate"
 
 pip_install "Hugging Face Hub" "huggingface_hub"
 
-# AI Development Frameworks
-pip_install "LangChain" "langchain"
-
-pip_install "LlamaIndex" "llama-index"
-
-pip_install "Semantic Kernel" "semantic-kernel"
-
-# Vector Databases
-pip_install "ChromaDB" "chromadb"
-
-pip_install "Pinecone" "pinecone-client"
-
-pip_install "Qdrant" "qdrant-client"
-
-pip_install "Weaviate" "weaviate-client"
+# Core AI frameworks are now installed by core_ai_tools.zsh
+# This prevents duplication and ensures consistent versions across AI tools
+print_info "Core AI frameworks (LangChain, ChromaDB, etc.) handled by core_ai_tools.zsh"
 
 # AI Testing and Evaluation
 pip_install "Ragas" "ragas"

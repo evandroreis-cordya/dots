@@ -90,12 +90,9 @@ else
     print_result $? "PowerShell"
 fi
 
-if brew list --cask | grep -q "wezterm"; then
-    print_success "WezTerm (already installed)"
-else
-    brew install --cask wezterm &> /dev/null
-    print_result $? "WezTerm"
-fi
+# WezTerm installation moved to specialized script: wezterm.zsh
+# This prevents duplication and ensures comprehensive configuration
+print_info "WezTerm installation handled by specialized script: wezterm.zsh"
 
 # Media Tools
 print_in_purple "
@@ -117,25 +114,9 @@ else
     print_result $? "Smart Converter"
 fi
 
-# Communication
-print_in_purple "
-   Communication
-
-"
-
-if brew list --cask | grep -q "slack"; then
-    print_success "Slack (already installed)"
-else
-    brew install --cask slack &> /dev/null
-    print_result $? "Slack"
-fi
-
-if brew list --cask | grep -q "zoom"; then
-    print_success "Zoom (already installed)"
-else
-    brew install --cask zoom &> /dev/null
-    print_result $? "Zoom"
-fi
+# Communication tools installation moved to specialized script: communication_tools.zsh
+# This prevents duplication and provides comprehensive communication tool management
+print_info "Communication tools installation handled by specialized script: communication_tools.zsh"
 
 # Productivity Tools
 print_in_purple "
@@ -192,12 +173,9 @@ else
     print_result $? "Notion"
 fi
 
-if brew list --cask | grep -q "microsoft-teams"; then
-    print_success "Microsoft Teams (already installed)"
-else
-    brew install --cask microsoft-teams &> /dev/null
-    print_result $? "Microsoft Teams"
-fi
+# Microsoft Teams installation moved to specialized script: communication_tools.zsh
+# This prevents duplication and provides comprehensive communication tool management
+print_info "Microsoft Teams installation handled by specialized script: communication_tools.zsh"
 
 print_in_green "
   Daily tools setup complete!

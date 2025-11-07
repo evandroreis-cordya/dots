@@ -48,12 +48,9 @@ execute "pip3 install agentforge" \
 execute "pip3 install agentforge-cli" \
     "Installing AgentForge CLI"
 
-# LangChain Agents - Advanced agent capabilities
-execute "pip3 install langchain-agents" \
-    "Installing LangChain Agents"
-
-execute "pip3 install langchain-experimental" \
-    "Installing LangChain Experimental"
+# LangChain Agents packages are now installed by core_ai_tools.zsh
+# This prevents duplication and ensures consistent versions across AI tools
+print_info "LangChain Agents packages handled by core_ai_tools.zsh"
 
 # Agent development tools
 execute "pip3 install agenthub" \

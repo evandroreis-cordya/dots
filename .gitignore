@@ -43,3 +43,4 @@ Temporary Items
 # Ignore dependency directories
 node_modules/
 vendor/
+.DS_Store

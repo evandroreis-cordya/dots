@@ -82,8 +82,9 @@ execute "pip3 install anthropic-eval" \
     "Installing Anthropic Evaluation Tools"
 
 # Integration Tools
-execute "pip3 install langchain-anthropic" \
-    "Installing LangChain Anthropic Integration"
+# LangChain Anthropic integration is now installed by core_ai_tools.zsh
+# This prevents duplication and ensures consistent versions across AI tools
+print_info "LangChain Anthropic integration handled by core_ai_tools.zsh"
 
 execute "pip3 install anthropic-functions" \
     "Installing Anthropic Functions"

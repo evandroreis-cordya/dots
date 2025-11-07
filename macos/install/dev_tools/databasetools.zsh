@@ -120,17 +120,9 @@ print_in_purple "
 
 # Check if pip3 is available
 if command -v pip3 &> /dev/null; then
-    # Chroma
-    if pip3 list 2>/dev/null | grep -q "chromadb"; then
-        print_success "Chroma (already installed)"
-    else
-        pip3 install chromadb 2>/dev/null
-        if [ $? -eq 0 ]; then
-            print_success "Chroma"
-        else
-            print_warning "Chroma (optional - skipped)"
-        fi
-    fi
+# ChromaDB is now installed by core_ai_tools.zsh
+# This prevents duplication and ensures consistent versions across AI tools
+print_info "ChromaDB installation handled by core_ai_tools.zsh"
 
     # Pinecone CLI
     if pip3 list 2>/dev/null | grep -q "pinecone-client"; then
