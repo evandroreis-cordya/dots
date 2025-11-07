@@ -9,7 +9,7 @@ source "${SCRIPT_DIR}/utils.zsh" >/dev/null 2>&1 || true
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Global variables
-LOGS_DIR="$HOME/dotfiles/logs"
+LOGS_DIR="$HOME/dots/logs"
 CURRENT_LOG_FILE=""
 
 # Initialize logging
@@ -21,7 +21,7 @@ init_logging() {
     mkdir -p "$LOGS_DIR" 2>/dev/null
 
     # Create log filename
-    CURRENT_LOG_FILE="${LOGS_DIR}/dotfiles-${timestamp}.log"
+    CURRENT_LOG_FILE="${LOGS_DIR}/dots-${timestamp}.log"
 
     # Create empty log file
     touch "$CURRENT_LOG_FILE"
@@ -29,7 +29,7 @@ init_logging() {
     # Add header to log file (silently)
     {
         echo "========================================================"
-        echo "  DOTFILES TOOLSET INSTALLATION LOG"
+        echo "  DOTS TOOLSET INSTALLATION LOG"
         echo "  Started: $(date)"
         echo "  Hostname: $(hostname)"
         echo "  User: $(whoami)"

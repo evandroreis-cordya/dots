@@ -1,23 +1,23 @@
-# Windows PowerShell entry script for Dotfiles
+# Windows PowerShell entry script for Dots
 
 param(
     [string]$Hostname = $env:COMPUTERNAME,
     [string]$Username = $env:USERNAME,
     [string]$Email = "evandro.reis@cordya.ai",
-    [string]$Directory = "$env:USERPROFILE\dotfiles"
+    [string]$Directory = "$env:USERPROFILE\dots"
 )
 
 # Get the directory of the current script
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$DotfilesDir = "$env:USERPROFILE\dotfiles"
+$DotsDir = "$env:USERPROFILE\dots"
 
 # Define paths to scripts
-$UtilsScript = "$DotfilesDir\cross-platforms\scripts\os\utils.ps1"
-$LoggingScript = "$DotfilesDir\cross-platforms\scripts\os\logging.ps1"
-$SetupScript = "$DotfilesDir\cross-platforms\scripts\os\setup.ps1"
+$UtilsScript = "$DotsDir\cross-platforms\scripts\os\utils.ps1"
+$LoggingScript = "$DotsDir\cross-platforms\scripts\os\logging.ps1"
+$SetupScript = "$DotsDir\cross-platforms\scripts\os\setup.ps1"
 
 # Define the logs directory
-$LogsDir = "$env:USERPROFILE\dotfiles\logs"
+$LogsDir = "$env:USERPROFILE\dots\logs"
 
 # Ensure logs directory exists
 if (-not (Test-Path $LogsDir)) {
@@ -39,13 +39,13 @@ Initialize-Logging
 # Log system information
 Write-LogSystemInfo
 
-# Log start of Dotfiles
-Write-LogInfo "Starting Dotfiles"
+# Log start of Dots
+Write-LogInfo "Starting Dots"
 
 # Check if the first argument is "/help"
 if ($args[0] -eq "/help") {
     # Path to README.md
-    $ReadmePath = "$DotfilesDir\README.md"
+    $ReadmePath = "$DotsDir\README.md"
 
     # Verify README.md exists
     if (-not (Test-Path $ReadmePath)) {
@@ -89,10 +89,10 @@ $ExitCode = $LASTEXITCODE
 # Log the result of the setup script execution
 if ($ExitCode -eq 0) {
     Write-LogSuccess "Setup script completed successfully"
-    Write-Host "Dotfiles setup completed successfully!" -ForegroundColor Green
+    Write-Host "Dots setup completed successfully!" -ForegroundColor Green
 } else {
     Write-LogError "Setup script failed with exit code $ExitCode"
-    Write-Error "Dotfiles setup failed with exit code $ExitCode"
+    Write-Error "Dots setup failed with exit code $ExitCode"
 }
 
 # Finalize logging

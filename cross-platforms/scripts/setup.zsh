@@ -3,7 +3,7 @@
 
 # Get the directory of the current script
 SCRIPT_DIR=${0:a:h}
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$HOME/dots"
 
 # Source environment detection
 source "${SCRIPT_DIR}/detect_environment.zsh"
@@ -16,7 +16,7 @@ source "${SCRIPT_DIR}/logging.zsh" 2>/dev/null || true
 HOSTNAME=${1:-$(hostname)}
 USERNAME=${2:-$(whoami)}
 EMAIL=${3:-"evandro.reis@cordya.ai"}
-DIRECTORY=${4:-"$HOME/dotfiles"}
+DIRECTORY=${4:-"$HOME/dots"}
 
 # Export variables for use in other scripts
 export HOSTNAME

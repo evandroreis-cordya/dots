@@ -153,7 +153,7 @@ setup_homebrew_environment() {
 }
 
 create_homebrew_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/homebrew.zsh"
 
     # Create directory if it doesn't exist
@@ -210,7 +210,7 @@ main() {
     create_homebrew_config
 
 # Load Homebrew configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/homebrew.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/homebrew.zsh"
 EOL
         print_result $? "Added Homebrew configuration to .zshrc"
     fi

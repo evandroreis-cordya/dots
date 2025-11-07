@@ -118,16 +118,16 @@ get_environment_info() {
 }
 
 # Export environment variables
-export DOTFILES_OS=$(detect_os)
-export DOTFILES_SHELL=$(detect_shell)
-export DOTFILES_PACKAGE_MANAGER=$(detect_package_manager "$DOTFILES_OS")
-export DOTFILES_TERMINAL=$(detect_terminal)
+export DOTS_OS=$(detect_os)
+export DOTS_SHELL=$(detect_shell)
+export DOTS_PACKAGE_MANAGER=$(detect_package_manager "$DOTS_OS")
+export DOTS_TERMINAL=$(detect_terminal)
 
 # Log environment detection
 if type log_info &>/dev/null; then
     log_info "Environment detected:"
-    log_info "  OS: $DOTFILES_OS"
-    log_info "  Shell: $DOTFILES_SHELL"
-    log_info "  Package Manager: $DOTFILES_PACKAGE_MANAGER"
-    log_info "  Terminal: $DOTFILES_TERMINAL"
+    log_info "  OS: $DOTS_OS"
+    log_info "  Shell: $DOTS_SHELL"
+    log_info "  Package Manager: $DOTS_PACKAGE_MANAGER"
+    log_info "  Terminal: $DOTS_TERMINAL"
 fi

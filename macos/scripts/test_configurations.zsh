@@ -57,7 +57,7 @@ log_test() {
 test_config_syntax() {
     print_in_yellow "Testing configuration syntax..."
     
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local errors=0
     
     for config_file in "$config_dir"/*.zsh; do
@@ -86,7 +86,7 @@ test_config_syntax() {
 test_config_loading() {
     print_in_yellow "Testing configuration loading..."
     
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local errors=0
     
     for config_file in "$config_dir"/*.zsh; do
@@ -266,7 +266,7 @@ test_ai_tool_configs() {
     local errors=0
     
     for config in "${ai_configs[@]}"; do
-        local config_path="$HOME/dotfiles/macos/configs/shell/zsh_configs/$config"
+        local config_path="$HOME/dots/macos/configs/shell/zsh_configs/$config"
         
         if [[ -f "$config_path" ]]; then
             # Test if config can be sourced without errors
@@ -305,7 +305,7 @@ test_installation_scripts() {
     local errors=0
     
     for script in "${install_scripts[@]}"; do
-        local script_path="$HOME/dotfiles/macos/install/ai_tools/$script"
+        local script_path="$HOME/dots/macos/install/ai_tools/$script"
         
         if [[ -f "$script_path" ]]; then
             # Test script syntax
@@ -334,7 +334,7 @@ test_installation_scripts() {
 test_load_order() {
     print_in_yellow "Testing load order configuration..."
     
-    local load_order_file="$HOME/dotfiles/macos/configs/shell/zsh_configs/00_load_order.zsh"
+    local load_order_file="$HOME/dots/macos/configs/shell/zsh_configs/00_load_order.zsh"
     
     if [[ -f "$load_order_file" ]]; then
         # Test load order syntax
@@ -373,8 +373,8 @@ test_performance() {
         
         # Simulate shell startup
         zsh -c "
-            source '$HOME/dotfiles/macos/configs/shell/zsh_configs/exports.zsh'
-            source '$HOME/dotfiles/macos/configs/shell/zsh_configs/aliases.zsh'
+            source '$HOME/dots/macos/configs/shell/zsh_configs/exports.zsh'
+            source '$HOME/dots/macos/configs/shell/zsh_configs/aliases.zsh'
         " >/dev/null 2>&1
         
         local test_end=$(date +%s.%N)

@@ -93,7 +93,7 @@ print_in_purple "
 
 # Create modular configuration file for GPG
 create_gpg_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/gpg.zsh"
 
     # Create directory if it doesn't exist
@@ -200,7 +200,7 @@ create_gpg_config
 configure_gpg
 
 # Load GPG configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/gpg.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/gpg.zsh"
 EOL
     print_result $? "Added GPG configuration to .zshrc"
 fi

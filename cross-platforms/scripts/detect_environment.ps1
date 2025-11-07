@@ -131,20 +131,20 @@ function Get-EnvironmentInfo {
 }
 
 # Export environment variables
-$env:DOTFILES_OS = Get-OperatingSystem
-$env:DOTFILES_SHELL = Get-Shell
-$env:DOTFILES_PACKAGE_MANAGER = Get-PackageManager
-$env:DOTFILES_TERMINAL = Get-Terminal
-$env:DOTFILES_ARCH = Get-Architecture
+$env:DOTS_OS = Get-OperatingSystem
+$env:DOTS_SHELL = Get-Shell
+$env:DOTS_PACKAGE_MANAGER = Get-PackageManager
+$env:DOTS_TERMINAL = Get-Terminal
+$env:DOTS_ARCH = Get-Architecture
 
 # Log environment detection
 if (Get-Command Write-LogInfo -ErrorAction SilentlyContinue) {
     Write-LogInfo "Environment detected:"
-    Write-LogInfo "  OS: $env:DOTFILES_OS"
-    Write-LogInfo "  Shell: $env:DOTFILES_SHELL"
-    Write-LogInfo "  Package Manager: $env:DOTFILES_PACKAGE_MANAGER"
-    Write-LogInfo "  Terminal: $env:DOTFILES_TERMINAL"
-    Write-LogInfo "  Architecture: $env:DOTFILES_ARCH"
+    Write-LogInfo "  OS: $env:DOTS_OS"
+    Write-LogInfo "  Shell: $env:DOTS_SHELL"
+    Write-LogInfo "  Package Manager: $env:DOTS_PACKAGE_MANAGER"
+    Write-LogInfo "  Terminal: $env:DOTS_TERMINAL"
+    Write-LogInfo "  Architecture: $env:DOTS_ARCH"
 }
 
 # Export functions

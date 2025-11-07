@@ -3,7 +3,7 @@
 
 # Global variables for logging
 CURRENT_LOG_FILE=""
-LOGS_DIR="$HOME/dotfiles/logs"
+LOGS_DIR="$HOME/dots/logs"
 
 # Initialize logging
 init_logging() {
@@ -11,7 +11,7 @@ init_logging() {
     local timestamp=$(date "+%Y-%m-%d-%H%M%S")
 
     # Create log filename
-    CURRENT_LOG_FILE="${LOGS_DIR}/dotfiles-${timestamp}.log"
+    CURRENT_LOG_FILE="${LOGS_DIR}/dots-${timestamp}.log"
 
     # Ensure logs directory exists
     mkdir -p "$(dirname "$CURRENT_LOG_FILE")" 2>/dev/null
@@ -25,12 +25,12 @@ init_logging() {
     # Add header to log file
     {
         echo "========================================================"
-        echo "  DOTFILES TOOLSET INSTALLATION LOG"
+        echo "  DOTS TOOLSET INSTALLATION LOG"
         echo "  Started: $(date)"
         echo "  Hostname: $(hostname)"
         echo "  User: $(whoami)"
-        echo "  OS: ${DOTFILES_OS:-$(get_os)}"
-        echo "  Shell: ${DOTFILES_SHELL:-$(detect_shell)}"
+        echo "  OS: ${DOTS_OS:-$(get_os)}"
+        echo "  Shell: ${DOTS_SHELL:-$(detect_shell)}"
         echo "========================================================"
         echo ""
     } >> "$CURRENT_LOG_FILE"
@@ -123,17 +123,17 @@ execute_with_log() {
 # Log system information
 log_system_info() {
     log_info "System Information:"
-    log_info "  OS: ${DOTFILES_OS:-$(get_os)}"
-    log_info "  Architecture: ${DOTFILES_ARCH:-$(get_arch)}"
-    log_info "  Shell: ${DOTFILES_SHELL:-$(detect_shell)}"
-    log_info "  Package Manager: ${DOTFILES_PACKAGE_MANAGER:-$(detect_package_manager "${DOTFILES_OS:-$(get_os)}")}"
-    log_info "  Terminal: ${DOTFILES_TERMINAL:-$(detect_terminal)}"
+    log_info "  OS: ${DOTS_OS:-$(get_os)}"
+    log_info "  Architecture: ${DOTS_ARCH:-$(get_arch)}"
+    log_info "  Shell: ${DOTS_SHELL:-$(detect_shell)}"
+    log_info "  Package Manager: ${DOTS_PACKAGE_MANAGER:-$(detect_package_manager "${DOTS_OS:-$(get_os)}")}"
+    log_info "  Terminal: ${DOTS_TERMINAL:-$(detect_terminal)}"
     log_info "  User: $(whoami)"
     log_info "  Hostname: $(hostname)"
     log_info "  Home Directory: $HOME"
 
     # OS-specific system information
-    case "${DOTFILES_OS:-$(get_os)}" in
+    case "${DOTS_OS:-$(get_os)}" in
         macos)
             log_info "  macOS Version: $(sw_vers -productVersion)"
             log_info "  macOS Build: $(sw_vers -buildVersion)"
@@ -154,10 +154,10 @@ log_system_info() {
 # Log environment variables
 log_environment() {
     log_info "Environment Variables:"
-    log_info "  DOTFILES_OS: $DOTFILES_OS"
-    log_info "  DOTFILES_SHELL: $DOTFILES_SHELL"
-    log_info "  DOTFILES_PACKAGE_MANAGER: $DOTFILES_PACKAGE_MANAGER"
-    log_info "  DOTFILES_TERMINAL: $DOTFILES_TERMINAL"
+    log_info "  DOTS_OS: $DOTS_OS"
+    log_info "  DOTS_SHELL: $DOTS_SHELL"
+    log_info "  DOTS_PACKAGE_MANAGER: $DOTS_PACKAGE_MANAGER"
+    log_info "  DOTS_TERMINAL: $DOTS_TERMINAL"
     log_info "  HOSTNAME: $HOSTNAME"
     log_info "  USERNAME: $USERNAME"
     log_info "  EMAIL: $EMAIL"
@@ -234,7 +234,7 @@ finalize_logging() {
         {
             echo ""
             echo "========================================================"
-            echo "  DOTFILES TOOLSET INSTALLATION COMPLETED"
+            echo "  DOTS TOOLSET INSTALLATION COMPLETED"
             echo "  Finished: $(date)"
             echo "  Total Duration: $(($(date +%s) - $(stat -f %B "$CURRENT_LOG_FILE" 2>/dev/null || echo $(date +%s)))) seconds"
             echo "========================================================"
@@ -247,10 +247,10 @@ finalize_logging() {
 # Clean up old log files
 cleanup_logs() {
     local days_to_keep="${1:-7}"
-    local log_pattern="${LOGS_DIR}/dotfiles-*.log"
+    local log_pattern="${LOGS_DIR}/dots-*.log"
 
     if [[ -d "$LOGS_DIR" ]]; then
-        find "$LOGS_DIR" -name "dotfiles-*.log" -type f -mtime +$days_to_keep -delete 2>/dev/null
+        find "$LOGS_DIR" -name "dots-*.log" -type f -mtime +$days_to_keep -delete 2>/dev/null
         log_info "Cleaned up log files older than $days_to_keep days"
     fi
 }

@@ -45,8 +45,8 @@ if type log_info &>/dev/null; then
 fi
 
 # Create zsh_configs directory for modular configurations
-mkdir -p "$HOME/dotfiles/macos/configs/shell/zsh_configs"
-print_success "Created modular configuration directory at $HOME/dotfiles/macos/configs/shell/zsh_configs
+mkdir -p "$HOME/dots/macos/configs/shell/zsh_configs"
+print_success "Created modular configuration directory at $HOME/dots/macos/configs/shell/zsh_configs
 "
 
 SCRIPT_DIR_INSTALL_MACOS="$SCRIPT_DIR/install/macos"

@@ -221,7 +221,7 @@ print_success "Swift development environment"
 
 # Create modular configuration file for Swift
 create_swift_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/swift.zsh"
 
     # Create directory if it doesn't exist
@@ -273,7 +273,7 @@ EOL
 create_swift_config
 
 # Load Swift configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/swift.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/swift.zsh"
 EOL
     print_result $? "Added Swift configuration to .zshrc"
 fi

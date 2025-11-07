@@ -17,7 +17,7 @@ create_install_banner "$0"
 # Create modular configuration if needed
 # Example:
 # create_config() {
-#     local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+#     local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
 #     local config_file="$config_dir/your_config.zsh"
 #
 #     # Create directory if it doesn't exist

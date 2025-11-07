@@ -2,7 +2,7 @@
 
 # Global variables for logging
 $script:CURRENT_LOG_FILE = ""
-$script:LOGS_DIR = "$env:USERPROFILE\dotfiles\logs"
+$script:LOGS_DIR = "$env:USERPROFILE\dots\logs"
 
 # Initialize logging
 function Initialize-Logging {
@@ -10,7 +10,7 @@ function Initialize-Logging {
     $timestamp = Get-Date -Format "yyyy-MM-dd-HHmmss"
 
     # Create log filename
-    $script:CURRENT_LOG_FILE = "$script:LOGS_DIR\dotfiles-$timestamp.log"
+    $script:CURRENT_LOG_FILE = "$script:LOGS_DIR\dots-$timestamp.log"
 
     # Ensure logs directory exists
     if (-not (Test-Path $script:LOGS_DIR)) {
@@ -282,7 +282,7 @@ function Clear-OldLogs {
 
     if (Test-Path $script:LOGS_DIR) {
         $cutoffDate = (Get-Date).AddDays(-$DaysToKeep)
-        $oldLogs = Get-ChildItem -Path $script:LOGS_DIR -Filter "dotfiles-*.log" | Where-Object { $_.CreationTime -lt $cutoffDate }
+        $oldLogs = Get-ChildItem -Path $script:LOGS_DIR -Filter "dots-*.log" | Where-Object { $_.CreationTime -lt $cutoffDate }
 
         foreach ($log in $oldLogs) {
             Remove-Item $log.FullName -Force

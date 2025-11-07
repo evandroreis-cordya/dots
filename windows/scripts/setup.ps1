@@ -4,21 +4,21 @@ param(
     [string]$Hostname = $env:COMPUTERNAME,
     [string]$Username = $env:USERNAME,
     [string]$Email = "evandro.reis@cordya.ai",
-    [string]$Directory = "$env:USERPROFILE\dotfiles"
+    [string]$Directory = "$env:USERPROFILE\dots"
 )
 
 # Get the directory of the current script
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$DotfilesDir = "$env:USERPROFILE\dotfiles"
+$DotsDir = "$env:USERPROFILE\dots"
 
 # Source cross-platform utilities
-. "$DotfilesDir\cross-platforms\scripts\os\detect_environment.ps1"
-. "$DotfilesDir\cross-platforms\scripts\os\utils.ps1"
-. "$DotfilesDir\cross-platforms\scripts\os\logging.ps1"
+. "$DotsDir\cross-platforms\scripts\os\detect_environment.ps1"
+. "$DotsDir\cross-platforms\scripts\os\utils.ps1"
+. "$DotsDir\cross-platforms\scripts\os\logging.ps1"
 
 # Verify we're running on Windows
-if ($env:DOTFILES_OS -ne "windows") {
-    Write-Error "This script is intended for Windows only. Detected OS: $env:DOTFILES_OS"
+if ($env:DOTS_OS -ne "windows") {
+    Write-Error "This script is intended for Windows only. Detected OS: $env:DOTS_OS"
     exit 1
 }
 
@@ -164,7 +164,7 @@ function Configure-PowerShell {
 
     # Create PowerShell profile
     $profileContent = @"
-# PowerShell Profile for Dotfiles
+# PowerShell Profile for Dots
 # Generated on $(Get-Date)
 
 # Import Oh My Posh
@@ -249,11 +249,11 @@ function Get-DiskUsage { Get-WmiObject -Class Win32_LogicalDisk | Select-Object 
 function Get-MemoryUsage { Get-WmiObject -Class Win32_OperatingSystem | Select-Object @{Name="TotalRAM(GB)";Expression={[math]::Round($_.TotalVisibleMemorySize/1MB,2)}}, @{Name="FreeRAM(GB)";Expression={[math]::Round($_.FreePhysicalMemory/1MB,2)}} }
 
 # Load additional configurations
-if (Test-Path "$DotfilesDir\windows\configs\shell\*.ps1") {
-    Get-ChildItem "$DotfilesDir\windows\configs\shell\*.ps1" | ForEach-Object { . $_.FullName }
+if (Test-Path "$DotsDir\windows\configs\shell\*.ps1") {
+    Get-ChildItem "$DotsDir\windows\configs\shell\*.ps1" | ForEach-Object { . $_.FullName }
 }
 
-Write-Host "Dotfiles PowerShell configuration loaded!" -ForegroundColor Green
+Write-Host "Dots PowerShell configuration loaded!" -ForegroundColor Green
 "@
 
     Set-Content -Path $PROFILE -Value $profileContent
@@ -436,7 +436,7 @@ function Main {
     Clear-Host
 
     # Display banner
-    Write-Host "`n >> Welcome to Cordya AI Dotfiles 25H1 Edition for Windows" -ForegroundColor Yellow
+    Write-Host "`n >> Welcome to Cordya AI Dots 25H1 Edition for Windows" -ForegroundColor Yellow
     Write-Host "Copyright (c) 2025 Cordya AI. All rights reserved." -ForegroundColor Yellow
 
     # Check if running as administrator
@@ -447,7 +447,7 @@ function Main {
     }
 
     # Display configuration
-    Write-Host "`n >> Starting Dotfiles with the following configuration:" -ForegroundColor Green
+    Write-Host "`n >> Starting Dots with the following configuration:" -ForegroundColor Green
     Write-Host "---------------------------------------------------------------" -ForegroundColor Green
     Write-Host "Hostname : $Hostname" -ForegroundColor Green
     Write-Host "Username : $Username" -ForegroundColor Green
@@ -473,7 +473,7 @@ function Main {
     Create-Directories
 
     # Install everything based on selected groups
-    & "$DotfilesDir\windows\install\main.ps1" -Hostname $Hostname -Username $Username -Email $Email -Directory $Directory
+    & "$DotsDir\windows\install\main.ps1" -Hostname $Hostname -Username $Username -Email $Email -Directory $Directory
 
     Write-Host "`n >> Setup completed! Please restart your terminal or run 'refreshenv' to reload environment variables." -ForegroundColor Magenta
 }

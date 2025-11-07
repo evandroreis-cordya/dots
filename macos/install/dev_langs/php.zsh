@@ -97,7 +97,7 @@ chmod 666 /usr/local/var/log/php_errors.log
 
 # Create modular configuration file for PHP
 create_php_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/php.zsh"
 
     # Create directory if it doesn't exist
@@ -307,7 +307,7 @@ EOL
 create_php_config
 
 # Load PHP configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/php.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/php.zsh"
 EOL
     print_result $? "Added PHP configuration to .zshrc"
 fi

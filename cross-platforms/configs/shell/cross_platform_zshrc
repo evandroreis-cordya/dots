@@ -2,27 +2,27 @@
 # This file contains configurations that are common across all platforms
 
 # Load cross-platform configurations
-source ~/dotfiles/cross-platforms/configs/shell/cross_platform_exports
-source ~/dotfiles/cross-platforms/configs/shell/cross_platform_functions
-source ~/dotfiles/cross-platforms/configs/shell/cross_platform_options
-source ~/dotfiles/cross-platforms/configs/shell/cross_platform_aliases
+source ~/dots/cross-platforms/configs/shell/cross_platform_exports
+source ~/dots/cross-platforms/configs/shell/cross_platform_functions
+source ~/dots/cross-platforms/configs/shell/cross_platform_options
+source ~/dots/cross-platforms/configs/shell/cross_platform_aliases
 
 # Load platform-specific configurations
 case "$(uname -s)" in
     Darwin*)
-        source ~/dotfiles/macos/configs/shell/macos_specific
+        source ~/dots/macos/configs/shell/macos_specific
         ;;
     Linux*)
-        source ~/dotfiles/linux/configs/shell/linux_specific
+        source ~/dots/linux/configs/shell/linux_specific
         ;;
     CYGWIN*|MINGW*|MSYS*)
-        source ~/dotfiles/windows/configs/shell/windows_specific
+        source ~/dots/windows/configs/shell/windows_specific
         ;;
 esac
 
 # Load additional configurations if they exist
-if [[ -d ~/dotfiles/cross-platforms/configs/shell/aliases ]]; then
-    for file in ~/dotfiles/cross-platforms/configs/shell/aliases/*; do
+if [[ -d ~/dots/cross-platforms/configs/shell/aliases ]]; then
+    for file in ~/dots/cross-platforms/configs/shell/aliases/*; do
         if [[ -f "$file" ]]; then
             source "$file"
         fi

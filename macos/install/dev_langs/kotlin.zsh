@@ -18,7 +18,7 @@ brew_install "Kotlin" "kotlin"
 
 # Create modular configuration file for Kotlin
 create_kotlin_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/kotlin.zsh"
 
     # Create directory if it doesn't exist
@@ -322,7 +322,7 @@ fi
 create_kotlin_config
 
 # Load Kotlin configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/kotlin.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/kotlin.zsh"
 EOL
     print_result $? "Added Kotlin configuration to .zshrc"
 fi

@@ -19,23 +19,23 @@
       `Y8bod88P" `Y8bod8P'   "888" o888o   o888o o888o `Y8bod8P' 8""888P'                                                                  
  
 
-Welcome to Cordya's dotfiles 2026 Edition, the complete multi-platform tools and apps installer for AI Engineers and Developers
+Welcome to Cordya's dots 2026 Edition, the complete multi-platform tools and apps installer for AI Engineers and Developers
 Copyright (C) 2026 Cordya AI. Developed in Brazil by Evandro Reis. All rights reserved.
 
 ## Introduction
 
-First and foremost, I want to express my gratitude to [Victor Cavalcante](https://github.com/vcavalcante/) (a great friend from Lambda3) who introduced me to the concept of dotfiles and guided me through his tutorial. Thank you, brother. Special thanks also to [Cătălin Mariș](https://github.com/alrra) for the scripts and enhancements. 
+First and foremost, I want to express my gratitude to [Victor Cavalcante](https://github.com/vcavalcante/) (a great friend from Lambda3) who introduced me to the concept of dots and guided me through his tutorial. Thank you, brother. Special thanks also to [Cătălin Mariș](https://github.com/alrra) for the scripts and enhancements. 
 
-**WARNING:** If you want to use this dotfiles and configuration scripts, first fork this repository. **DO NOT** use them without understanding what they do.
+**WARNING:** If you want to use this dots and configuration scripts, first fork this repository. **DO NOT** use them without understanding what they do.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+git clone https://github.com/YOUR_USERNAME/dots.git ~/dots
 ```
-**WARNING:** If you don't fork this repository, you will not be able to make changes to the configuration files. It must be downloaded from your forked repository. You must clone it in the `~/dotfiles` directory otherwise the script will not work.
+**WARNING:** If you don't fork this repository, you will not be able to make changes to the configuration files. It must be downloaded from your forked repository. You must clone it in the `~/dots` directory otherwise the script will not work.
 
 ## Supported Platforms
 
-The Dotfiles now supports multiple operating systems:
+The Dots now supports multiple operating systems:
 
 | Platform | Shell | Package Manager | Terminal | Status |
 |----------|-------|----------------|----------|--------|
@@ -70,25 +70,25 @@ The Dotfiles now supports multiple operating systems:
 
 ### macOS
 ```zsh
-cd ~/dotfiles
-./start_dotfiles.zsh
+cd ~/dots
+./start_dots.zsh
 ```
 
 ### Linux
 ```bash
-cd ~/dotfiles
-./start_dotfiles.zsh
+cd ~/dots
+./start_dots.zsh
 ```
 
 ### Windows
 ```powershell
-cd $env:USERPROFILE\dotfiles
-.\start_dotfiles.ps1
+cd $env:USERPROFILE\dots
+.\start_dots.ps1
 ```
 
 ## Recent Updates (March 2025)
 
-The following major improvements have been made to the Dotfiles:
+The following major improvements have been made to the Dots:
 
 ### Core System Improvements
 - **Fixed Script Paths**: Corrected path references in all installation scripts to ensure proper sourcing of utility files
@@ -123,16 +123,16 @@ Review the code and remove anything you find unnecessary. The main files you sho
 
 | File | Purpose |
 |------|---------|
-| `start_dotfiles.zsh` | Main entry script that calls setup.zsh with default arguments |
+| `start_dots.zsh` | Main entry script that calls setup.zsh with default arguments |
 | `setup.zsh` | Main setup script and hub for calling other scripts |
 | `create_local_config_files.zsh` | Creation of local configurations (.local) |
 
 ## Directory Structure
 
-The Dotfiles follows a modular, multi-platform organization with scripts grouped by functionality and platform:
+The Dots follows a modular, multi-platform organization with scripts grouped by functionality and platform:
 
 ```
-dotfiles/
+dots/
 ├── resources/                 # Shared resources and assets
 │   └── fonts/                 # Font files for all platforms
 ├── cross-platforms/             # Cross-platform configurations and scripts
@@ -207,18 +207,18 @@ When running the setup script, you can select which groups of tools to install:
 
 ## Enhanced Logging System
 
-The Dotfiles features a comprehensive logging system that:
+The Dots features a comprehensive logging system that:
 
 - Records all installation and configuration activities
 - Maintains silent logging for installation messages unless there's an error
 - Provides detailed logs for troubleshooting
 - Integrates with all print functions for consistent output
 
-All logs are stored in `$HOME/dotfiles/logs/` with timestamps and log levels.
+All logs are stored in `$HOME/dots/logs/` with timestamps and log levels.
 
 ## Advanced Configuration Management System
 
-The dotfiles features a sophisticated configuration management system that ensures optimal loading order and prevents conflicts between different tools and languages.
+The dots features a sophisticated configuration management system that ensures optimal loading order and prevents conflicts between different tools and languages.
 
 ### Load Order Management
 
@@ -249,7 +249,7 @@ Built-in alias conflict detection system:
 
 ### Configuration Files Structure
 
-All configuration files are stored in `$HOME/dotfiles/macos/configs/shell/zsh_configs/`:
+All configuration files are stored in `$HOME/dots/macos/configs/shell/zsh_configs/`:
 
 | File | Purpose | Load Order |
 |------|---------|------------|
@@ -332,11 +332,11 @@ This project includes a centralized tool registry system to prevent duplicate in
 2. **Clone and Setup**:
    ```zsh
    # Fork and clone the repository
-   git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
-   cd ~/dotfiles
+   git clone https://github.com/YOUR_USERNAME/dots.git ~/dots
+   cd ~/dots
    
    # Run the setup script
-   ./start_dotfiles.zsh
+   ./start_dots.zsh
    ```
 
 3. **Post-Installation**:
@@ -362,11 +362,11 @@ This project includes a centralized tool registry system to prevent duplicate in
 2. **Clone and Setup**:
    ```bash
    # Fork and clone the repository
-   git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
-   cd ~/dotfiles
+   git clone https://github.com/YOUR_USERNAME/dots.git ~/dots
+   cd ~/dots
    
    # Run the setup script
-   ./start_dotfiles.zsh
+   ./start_dots.zsh
    ```
 
 3. **Post-Installation**:
@@ -388,11 +388,11 @@ This project includes a centralized tool registry system to prevent duplicate in
 2. **Clone and Setup**:
    ```powershell
    # Fork and clone the repository
-   git clone https://github.com/YOUR_USERNAME/dotfiles.git $env:USERPROFILE\dotfiles
-   cd $env:USERPROFILE\dotfiles
+   git clone https://github.com/YOUR_USERNAME/dots.git $env:USERPROFILE\dots
+   cd $env:USERPROFILE\dots
    
    # Run the setup script (as Administrator)
-   .\start_dotfiles.ps1
+   .\start_dots.ps1
    ```
 
 3. **Post-Installation**:
@@ -403,7 +403,7 @@ This project includes a centralized tool registry system to prevent duplicate in
 
 ## Installed Tools by Category
 
-Below is a comprehensive list of tools installed by the Dotfiles, organized by script group.
+Below is a comprehensive list of tools installed by the Dots, organized by script group.
 
 ### System Setup
 
@@ -519,7 +519,7 @@ Below is a comprehensive list of tools installed by the Dotfiles, organized by s
 
 ### AI and Productivity Tools
 
-The Dotfiles includes a comprehensive suite of AI and machine learning tools covering all major platforms and use cases:
+The Dots includes a comprehensive suite of AI and machine learning tools covering all major platforms and use cases:
 
 #### Core AI Platforms
 
@@ -617,7 +617,7 @@ The Dotfiles includes a comprehensive suite of AI and machine learning tools cov
 
 ## Available Installation Scripts
 
-The dotfiles includes a comprehensive set of installation scripts organized by category. Each script group can be installed independently or as part of the complete setup.
+The dots includes a comprehensive set of installation scripts organized by category. Each script group can be installed independently or as part of the complete setup.
 
 ### System Setup Scripts
 
@@ -745,7 +745,7 @@ The dotfiles includes a comprehensive set of installation scripts organized by c
 
 ### Anthropic MCP Integration
 
-The Dotfiles now includes comprehensive support for Anthropic's Model Control Protocol (MCP):
+The Dots now includes comprehensive support for Anthropic's Model Control Protocol (MCP):
 
 - **MCP Server Setup**: Automated installation and configuration of MCP servers
 - **Client Libraries**: Complete client-side tools for interacting with MCP servers
@@ -803,7 +803,7 @@ If you encounter issues during the installation process, here are common solutio
 **Problem**: Shell configurations not loading properly or conflicts between tools.
 
 **Solutions**:
-1. Check the load order in `~/dotfiles/zsh_configs/00_load_order.zsh`
+1. Check the load order in `~/dots/zsh_configs/00_load_order.zsh`
 2. Verify that configuration files exist and are executable
 3. Use `source ~/.zshrc` to reload configurations
 4. Check for alias conflicts using the built-in conflict detection system
@@ -823,7 +823,7 @@ If you encounter issues during the installation process, here are common solutio
 **Problem**: Specific tools fail to install or configure.
 
 **Solutions**:
-1. Check detailed logs in `~/dotfiles/logs/` for error information
+1. Check detailed logs in `~/dots/logs/` for error information
 2. Ensure internet connectivity and sufficient disk space
 3. Try running installation scripts manually for more detailed output
 4. Verify that prerequisites are installed (Xcode Command Line Tools, Homebrew)
@@ -835,7 +835,7 @@ If you encounter issues during the installation process, here are common solutio
 
 **Solutions**:
 1. Verify `ANTHROPIC_API_KEY` environment variable is set
-2. Check MCP server configuration in `~/dotfiles/zsh_configs/anthropic.zsh`
+2. Check MCP server configuration in `~/dots/zsh_configs/anthropic.zsh`
 3. Ensure MCP server is running on the correct host and port
 4. Use `mcp-status` alias to check server status
 5. Review MCP logs using `mcp-logs` alias
@@ -888,15 +888,15 @@ If you encounter issues during the installation process, here are common solutio
 
 If you continue to experience issues:
 
-1. **Check the Logs**: All installation activities are logged in `~/dotfiles/logs/`
+1. **Check the Logs**: All installation activities are logged in `~/dots/logs/`
 2. **Review Documentation**: Check individual tool documentation for specific requirements
 3. **Community Support**: Open an issue on the GitHub repository with detailed error information
 4. **Debug Mode**: Enable debug mode in scripts by uncommenting debug lines in configuration files
 5. **Clean Installation**: Consider starting with a clean macOS installation for complex issues
 
-## GNU Stow Implementation for Dotfiles
+## GNU Stow Implementation for Dots
 
-This document describes the GNU Stow implementation that replaces the manual directory creation and symbolic link functionality in the dotfiles setup.
+This document describes the GNU Stow implementation that replaces the manual directory creation and symbolic link functionality in the dots setup.
 
 ### Overview
 
@@ -905,7 +905,7 @@ GNU Stow is a symlink farm manager that helps manage configuration files by crea
 ### Directory Structure
 
 ```
-dotfiles/
+dots/
 ├── cross-platforms/
 │   ├── stow/               # GNU Stow packages directory
 │   │   ├── shell/          # Shell configuration package
@@ -954,7 +954,7 @@ dotfiles/
 ### Usage
 
 #### Basic Setup
-The stow setup is automatically called during the main dotfiles installation process:
+The stow setup is automatically called during the main dots installation process:
 
 ```bash
 # macOS
@@ -1094,7 +1094,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contributing
 
-Contributions to the Dotfiles are welcome! Please follow these guidelines:
+Contributions to the Dots are welcome! Please follow these guidelines:
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)

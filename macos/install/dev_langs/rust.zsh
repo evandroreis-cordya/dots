@@ -34,7 +34,7 @@ fi
 
 # Create modular configuration file for Rust
 create_rust_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/rust.zsh"
 
     # Create directory if it doesn't exist
@@ -185,7 +185,7 @@ cargo_install "cargo-sort" "cargo-sort"
 create_rust_config
 
 # Load Rust configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/rust.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/rust.zsh"
 EOL
     print_result $? "Added Rust configuration to .zshrc"
 fi

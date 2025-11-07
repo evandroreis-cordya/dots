@@ -35,15 +35,15 @@ create_directories() {
         "$HOME/Backups"        # General backups
         "$HOME/Backups/Apps" \
         "$HOME/Backups/Configs" \
-        "$HOME/Backups/dotfiles" # dotfiles backups
+        "$HOME/Backups/dots" # dots backups
 
         # Application directories
         "$HOME/.config/nvim"   # Neovim configuration
         "$HOME/.config/git"    # Git configuration
         "$HOME/.config/zsh"    # Zsh configuration
 
-        # Dotfiles logs directory
-        "$HOME/dotfiles/logs" # Installation logs
+        # Dots logs directory
+        "$HOME/dots/logs" # Installation logs
     )
 
     print_in_purple "\n >> Creating directories\n\n"

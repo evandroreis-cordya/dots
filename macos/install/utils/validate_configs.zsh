@@ -18,8 +18,8 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Configuration
-CONFIG_DIR="/Volumes/DEVS/repos/dotfiles/macos/configs/shell/zsh_configs"
-INSTALL_DIR="/Volumes/DEVS/repos/dotfiles/macos/install"
+CONFIG_DIR="/Volumes/DEVS/repos/dots/macos/configs/shell/zsh_configs"
+INSTALL_DIR="/Volumes/DEVS/repos/dots/macos/install"
 LOAD_ORDER_FILE="$CONFIG_DIR/00_load_order.zsh"
 
 # Validation results

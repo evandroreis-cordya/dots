@@ -5,7 +5,7 @@
 #
 
 # Dotfiles root directory
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/dots"
 
 # Language environment
 export LANG=en_US.UTF-8

@@ -32,7 +32,7 @@ verify_github_ssh() {
     fi
 }
 
-update_dotfiles() {
+update_dots() {
     local current_branch
     current_branch=$(git symbolic-ref --short HEAD 2> /dev/null)
 
@@ -41,7 +41,7 @@ update_dotfiles() {
         return 1
     fi
 
-    print_in_purple "\n >> Updating dotfiles content\n\n"
+    print_in_purple "\n >> Updating dots content\n\n"
 
     # Stash any local changes
     if ! git diff --quiet HEAD; then
@@ -60,7 +60,7 @@ update_dotfiles() {
                 git stash pop
             fi
 
-            print_success "dotfiles updated successfully"
+            print_success "dots updated successfully"
 
             # Check if we need to run setup again
             if [[ -f "${SCRIPT_DIR}/install/main.zsh" ]]; then
@@ -70,7 +70,7 @@ update_dotfiles() {
                 fi
             fi
         else
-            print_error "Failed to update dotfiles"
+            print_error "Failed to update dots"
             return 1
         fi
     else
@@ -92,10 +92,10 @@ main() {
     # Verify GitHub SSH access
     verify_github_ssh || return 1
 
-    # Update dotfiles content
-    ask_for_confirmation "Would you like to update the dotfiles content?"
+    # Update dots content
+    ask_for_confirmation "Would you like to update the dots content?"
     if answer_is_yes; then
-        update_dotfiles
+        update_dots
     fi
 }
 

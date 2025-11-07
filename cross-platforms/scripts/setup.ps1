@@ -4,12 +4,12 @@ param(
     [string]$Hostname = $env:COMPUTERNAME,
     [string]$Username = $env:USERNAME,
     [string]$Email = "evandro.reis@cordya.ai",
-    [string]$Directory = "$env:USERPROFILE\dotfiles"
+    [string]$Directory = "$env:USERPROFILE\dots"
 )
 
 # Get the directory of the current script
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$DotfilesDir = "$env:USERPROFILE\dotfiles"
+$DotfilesDir = "$env:USERPROFILE\dots"
 
 # Source environment detection
 . "$DotfilesDir\cross-platforms\scripts\os\detect_environment.ps1"

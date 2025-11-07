@@ -1,4 +1,4 @@
-# macOS Dotfiles Enhancement TODO List
+# macOS Dots Enhancement TODO List
 
 ## 🎯 Optimized Implementation Sequence
 
@@ -8,7 +8,7 @@
 #### 1. Configuration File Audit and Foundation
 - [ ] **Audit existing configurations**
   - [ ] Review all existing `zsh_configs/*.zsh` files
-  - [ ] Identify missing configurations for tools installed by the dotfiles tool.
+  - [ ] Identify missing configurations for tools installed by the dots tool.
   - [ ] Document current state and gaps
 - [x] **Create foundation configuration files**
   - [x] `macos/configs/shell/zsh_configs/wezterm.zsh` - Terminal environment setup

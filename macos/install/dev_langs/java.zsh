@@ -191,7 +191,7 @@ print_result $? "Gradle configuration"
 
 # Create modular configuration file for Java
 create_java_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/java.zsh"
 
     # Create directory if it doesn't exist
@@ -647,7 +647,7 @@ EOL
 create_java_config
 
 # Load Java configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/java.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/java.zsh"
 EOL
     print_result $? "Added Java configuration to .zshrc"
 fi

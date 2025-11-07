@@ -14,7 +14,7 @@ brew_install "Go" "go"
 
 # Create modular configuration file for Go
 create_go_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/go.zsh"
 
     # Create directory if it doesn't exist

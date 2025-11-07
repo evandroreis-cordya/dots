@@ -9,7 +9,7 @@ source "${SCRIPT_DIR}/logging.zsh" 2>/dev/null || true
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Repository configuration
-typeset -r GITHUB_REPOSITORY="evandroreis-cordya/dotfiles"
+typeset -r GITHUB_REPOSITORY="evandroreis-cordya/dots"
 typeset -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
 
 # Default configuration
@@ -19,7 +19,7 @@ typeset skipQuestions=false
 HOSTNAME=${1:-$(hostname)}
 USERNAME=${2:-$(whoami)}
 EMAIL=${3:-"evandro.reis@cordya.ai"}
-DIRECTORY=${4:-"$HOME/dotfiles"}
+DIRECTORY=${4:-"$HOME/dots"}
 
 # Export variables for use in other scripts
 export HOSTNAME
@@ -262,19 +262,19 @@ install_git() {
 
 display_banner() {
     if (( $+commands[figlet] )); then
-        print_in_yellow "$(figlet -f ogre -c 'Dotfiles')\n"
-        print_in_yellow "Welcome to Cordya AI Dotfiles 25H1 Edition, the complete Mac OS tools and apps installer for AI and Vibe Coders!\n"
+        print_in_yellow "$(figlet -f ogre -c 'Dots')\n"
+        print_in_yellow "Welcome to Cordya AI Dots 25H1 Edition, the complete Mac OS tools and apps installer for AI and Vibe Coders!\n"
         print_in_yellow "Copyright (c) 2025 Cordya AI. All rights reserved.\n"
 
         if type log_info &>/dev/null; then
-            log_info "Displayed Dotfiles banner with figlet"
+            log_info "Displayed Dots banner with figlet"
         fi
     else
-        print_in_yellow "\n >> Welcome to Cordya AI Dotfiles 25H1 Edition, the complete Mac OS tools and apps installer for AI and Vibe Coders!\n"
+        print_in_yellow "\n >> Welcome to Cordya AI Dots 25H1 Edition, the complete Mac OS tools and apps installer for AI and Vibe Coders!\n"
         print_in_yellow "Copyright (c) 2025 Cordya AI. All rights reserved.\n"
 
         if type log_info &>/dev/null; then
-            log_info "Displayed Dotfiles banner (figlet not available)"
+            log_info "Displayed Dots banner (figlet not available)"
         fi
     fi
 }
@@ -424,8 +424,8 @@ main() {
         fi
 
         # Set the sudo timeout to 2 hours (7200 seconds)
-        sudo sh -c "echo 'Defaults:${USER} timestamp_timeout=7200' > /etc/sudoers.d/dotfiles_timeout"
-        sudo chmod 440 /etc/sudoers.d/dotfiles_timeout
+        sudo sh -c "echo 'Defaults:${USER} timestamp_timeout=7200' > /etc/sudoers.d/dots_timeout"
+        sudo chmod 440 /etc/sudoers.d/dots_timeout
 
         # Export the SUDO_REQUESTED variable to child processes
         export SUDO_REQUESTED=true
@@ -435,7 +435,7 @@ main() {
     setup_sudo_timestamp_dir
 
     # Display information about what's happening
-    print_in_green "\n >> Starting Dotfiles with the following configuration:\n"
+    print_in_green "\n >> Starting Dots with the following configuration:\n"
     print_in_green "---------------------------------------------------------------\n"
     print_in_green "Hostname : $HOSTNAME\n"
     print_in_green "Username : $USERNAME\n"

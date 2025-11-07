@@ -144,8 +144,8 @@ cursor_debug_mcp() {
 
 # Function to troubleshoot Cursor issues
 cursor_troubleshoot() {
-    if [[ -f "$HOME/dotfiles/macos/scripts/cursor_troubleshoot.zsh" ]]; then
-        source "$HOME/dotfiles/macos/scripts/cursor_troubleshoot.zsh"
+    if [[ -f "$HOME/dots/macos/scripts/cursor_troubleshoot.zsh" ]]; then
+        source "$HOME/dots/macos/scripts/cursor_troubleshoot.zsh"
         cursor_troubleshoot_main "$@"
     else
         echo "Cursor troubleshooting script not found"

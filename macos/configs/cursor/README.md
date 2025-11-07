@@ -1,6 +1,6 @@
 # Cursor IDE Configuration
 
-This directory contains the complete Cursor IDE configuration for the dotfiles setup, including settings, keybindings, and MCP server configurations.
+This directory contains the complete Cursor IDE configuration for the dots setup, including settings, keybindings, and MCP server configurations.
 
 ## Files Overview
 
@@ -63,10 +63,10 @@ The MCP (Model Context Protocol) configuration includes support for:
 
 ## Installation
 
-The Cursor configuration is automatically installed when you run the dotfiles setup with the `dev_tools` group enabled:
+The Cursor configuration is automatically installed when you run the dots setup with the `dev_tools` group enabled:
 
 ```bash
-./start_dotfiles.zsh
+./start_dots.zsh
 ```
 
 Or install Cursor specifically:
@@ -207,9 +207,9 @@ Check Cursor logs for debugging:
 - macOS: `~/Library/Logs/Cursor/`
 - Configuration: `~/.cursor/`
 
-## Integration with Dotfiles
+## Integration with Dots
 
-The Cursor configuration integrates seamlessly with the dotfiles setup:
+The Cursor configuration integrates seamlessly with the dots setup:
 - Automatic installation via Homebrew
 - Configuration management via Stow
 - Shell integration via zsh configuration
@@ -221,4 +221,4 @@ For issues with Cursor configuration:
 1. Check the troubleshooting section
 2. Review Cursor documentation
 3. Check MCP server documentation
-4. Open an issue in the dotfiles repository
+4. Open an issue in the dots repository

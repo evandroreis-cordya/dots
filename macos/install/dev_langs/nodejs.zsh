@@ -117,7 +117,7 @@ install_npm_packages() {
 
 # Create modular configuration file for Node.js
 create_nodejs_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/nodejs.zsh"
 
     # Create directory if it doesn't exist
@@ -595,7 +595,7 @@ main() {
     create_nodejs_config
 
 # Load Node.js configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/nodejs.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/nodejs.zsh"
 EOL
         print_result $? "Added Node.js configuration to .zshrc"
     fi

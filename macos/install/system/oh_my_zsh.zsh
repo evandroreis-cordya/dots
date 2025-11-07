@@ -529,12 +529,12 @@ configure_oh_my_zsh() {
 # # DOTFILES ZSH CONFIGURATION
 # #==============================================================================
 # # This is the main .zshrc file that loads all modular configurations from
-# # the dotfiles directory. All specific configurations are organized
-# # into separate files in ~/dotfiles/zsh_configs/
+# # the dots directory. All specific configurations are organized
+# # into separate files in ~/dots/zsh_configs/
 # #
 # # Configuration files are loaded in a specific optimized order to avoid
 # # conflicts and ensure proper initialization. The load order is defined in:
-# # ~/dotfiles/zsh_configs/00_load_order.zsh
+# # ~/dots/zsh_configs/00_load_order.zsh
 # #
 # # Loading sequence:
 # # 1. ohmyzsh.zsh     - Oh My Zsh framework and plugins
@@ -546,26 +546,26 @@ configure_oh_my_zsh() {
 # # 7. misc.zsh        - Miscellaneous tools (iTerm2, Jina, Langflow, Kiro, etc.)
 # #
 # # To modify configurations, edit the appropriate file in:
-# # ~/dotfiles/zsh_configs/
+# # ~/dots/zsh_configs/
 # #
 # # To disable a configuration, rename it with .disabled extension:
-# # mv ~/dotfiles/zsh_configs/something.zsh ~/dotfiles/zsh_configs/something.zsh.disabled
+# # mv ~/dots/zsh_configs/something.zsh ~/dots/zsh_configs/something.zsh.disabled
 # #==============================================================================
 
 # # Load the load order configuration first
-# if [ -f "$HOME/dotfiles/zsh_configs/00_load_order.zsh" ]; then
-#     source "$HOME/dotfiles/zsh_configs/00_load_order.zsh"
+# if [ -f "$HOME/dots/zsh_configs/00_load_order.zsh" ]; then
+#     source "$HOME/dots/zsh_configs/00_load_order.zsh"
 
 #     # Load all configurations in the optimized order
 #     load_configs_in_order
 # else
 #     # Fallback: Load Oh My Zsh first, then everything else
-#     if [ -f "$HOME/dotfiles/zsh_configs/ohmyzsh.zsh" ]; then
-#         source "$HOME/dotfiles/zsh_configs/ohmyzsh.zsh"
+#     if [ -f "$HOME/dots/zsh_configs/ohmyzsh.zsh" ]; then
+#         source "$HOME/dots/zsh_configs/ohmyzsh.zsh"
 #     fi
 
 #     # Load all other modular configurations from jarvistoolset
-#     for config_file in "$HOME/dotfiles/zsh_configs/"*.zsh; do
+#     for config_file in "$HOME/dots/zsh_configs/"*.zsh; do
 #         # Skip ohmyzsh.zsh and load order as they're already loaded
 #         if [[ "$config_file" != *"ohmyzsh.zsh" ]] && \
 #            [[ "$config_file" != *"00_load_order.zsh" ]] && \

@@ -56,23 +56,23 @@ export ZSH="$HOME/.oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
 
 # Load essential configurations only
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/exports.zsh"
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/aliases.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/exports.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/aliases.zsh"
 
 # Lazy load heavy tools
 lazy_load_python() {
     unset -f lazy_load_python
-    source "$HOME/dotfiles/macos/configs/shell/zsh_configs/python.zsh"
+    source "$HOME/dots/macos/configs/shell/zsh_configs/python.zsh"
 }
 
 lazy_load_node() {
     unset -f lazy_load_node
-    source "$HOME/dotfiles/macos/configs/shell/zsh_configs/node.zsh"
+    source "$HOME/dots/macos/configs/shell/zsh_configs/node.zsh"
 }
 
 lazy_load_java() {
     unset -f lazy_load_java
-    source "$HOME/dotfiles/macos/configs/shell/zsh_configs/java.zsh"
+    source "$HOME/dots/macos/configs/shell/zsh_configs/java.zsh"
 }
 
 # Create lazy load aliases
@@ -84,7 +84,7 @@ alias nvm='lazy_load_node && nvm'
 
 # Load remaining configurations in background
 {
-    source "$HOME/dotfiles/macos/configs/shell/zsh_configs/00_load_order.zsh"
+    source "$HOME/dots/macos/configs/shell/zsh_configs/00_load_order.zsh"
 } &
 EOF
     
@@ -229,27 +229,27 @@ lazy_load_tool() {
 # Define lazy loading for heavy tools
 setup_lazy_loading() {
     # Python tools
-    alias python='lazy_load_tool "python" "$HOME/dotfiles/macos/configs/shell/zsh_configs/python.zsh" && python'
-    alias pip='lazy_load_tool "python" "$HOME/dotfiles/macos/configs/shell/zsh_configs/python.zsh" && pip'
-    alias pyenv='lazy_load_tool "python" "$HOME/dotfiles/macos/configs/shell/zsh_configs/python.zsh" && pyenv'
+    alias python='lazy_load_tool "python" "$HOME/dots/macos/configs/shell/zsh_configs/python.zsh" && python'
+    alias pip='lazy_load_tool "python" "$HOME/dots/macos/configs/shell/zsh_configs/python.zsh" && pip'
+    alias pyenv='lazy_load_tool "python" "$HOME/dots/macos/configs/shell/zsh_configs/python.zsh" && pyenv'
     
     # Node.js tools
-    alias node='lazy_load_tool "node" "$HOME/dotfiles/macos/configs/shell/zsh_configs/node.zsh" && node'
-    alias npm='lazy_load_tool "node" "$HOME/dotfiles/macos/configs/shell/zsh_configs/node.zsh" && npm'
-    alias nvm='lazy_load_tool "node" "$HOME/dotfiles/macos/configs/shell/zsh_configs/node.zsh" && nvm'
+    alias node='lazy_load_tool "node" "$HOME/dots/macos/configs/shell/zsh_configs/node.zsh" && node'
+    alias npm='lazy_load_tool "node" "$HOME/dots/macos/configs/shell/zsh_configs/node.zsh" && npm'
+    alias nvm='lazy_load_tool "node" "$HOME/dots/macos/configs/shell/zsh_configs/node.zsh" && nvm'
     
     # Java tools
-    alias java='lazy_load_tool "java" "$HOME/dotfiles/macos/configs/shell/zsh_configs/java.zsh" && java'
-    alias javac='lazy_load_tool "java" "$HOME/dotfiles/macos/configs/shell/zsh_configs/java.zsh" && javac'
-    alias mvn='lazy_load_tool "java" "$HOME/dotfiles/macos/configs/shell/zsh_configs/java.zsh" && mvn'
-    alias gradle='lazy_load_tool "java" "$HOME/dotfiles/macos/configs/shell/zsh_configs/java.zsh" && gradle'
+    alias java='lazy_load_tool "java" "$HOME/dots/macos/configs/shell/zsh_configs/java.zsh" && java'
+    alias javac='lazy_load_tool "java" "$HOME/dots/macos/configs/shell/zsh_configs/java.zsh" && javac'
+    alias mvn='lazy_load_tool "java" "$HOME/dots/macos/configs/shell/zsh_configs/java.zsh" && mvn'
+    alias gradle='lazy_load_tool "java" "$HOME/dots/macos/configs/shell/zsh_configs/java.zsh" && gradle'
     
     # Docker tools
-    alias docker='lazy_load_tool "docker" "$HOME/dotfiles/macos/configs/shell/zsh_configs/docker.zsh" && docker'
-    alias docker-compose='lazy_load_tool "docker" "$HOME/dotfiles/macos/configs/shell/zsh_configs/docker.zsh" && docker-compose'
+    alias docker='lazy_load_tool "docker" "$HOME/dots/macos/configs/shell/zsh_configs/docker.zsh" && docker'
+    alias docker-compose='lazy_load_tool "docker" "$HOME/dots/macos/configs/shell/zsh_configs/docker.zsh" && docker-compose'
     
     # AI tools
-    alias python3='lazy_load_tool "ai_tools" "$HOME/dotfiles/macos/configs/shell/zsh_configs/ai_codegen.zsh" && python3'
+    alias python3='lazy_load_tool "ai_tools" "$HOME/dots/macos/configs/shell/zsh_configs/ai_codegen.zsh" && python3'
 }
 
 # Initialize lazy loading
@@ -410,7 +410,7 @@ create_validation_scripts() {
 # Configuration validation script
 
 validate_all_configs() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local errors=0
     local total=0
     

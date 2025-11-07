@@ -14,17 +14,17 @@ print_in_purple "
 print_in_yellow "
    Installing .TTF fonts
 "
-cp -R "$HOME/dotfiles/resources/fonts/*.ttf" /Library/Fonts
+cp -R "$HOME/dots/resources/fonts/*.ttf" /Library/Fonts
 
 print_in_yellow "
    Installing .OTF fonts
 "
-cp -R "$HOME/dotfiles/resources/fonts/*.otf" /Library/Fonts
+cp -R "$HOME/dots/resources/fonts/*.otf" /Library/Fonts
 
 print_in_yellow "
    Installing .WOFF fonts
 "
-cp -R "$HOME/dotfiles/resources/fonts/*.woff" /Library/Fonts
+cp -R "$HOME/dots/resources/fonts/*.woff" /Library/Fonts
 
 print_in_green "
    Fonts installation complete!

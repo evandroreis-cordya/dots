@@ -22,7 +22,7 @@ brew_install "Docker Desktop" "docker" "--cask"
 
 # Create modular configuration file for Docker
 create_docker_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/docker.zsh"
 
     # Create directory if it doesn't exist
@@ -472,7 +472,7 @@ EOL
 create_docker_config
 
 # Load Docker configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/docker.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/docker.zsh"
 EOL
     print_result $? "Added Docker configuration to .zshrc"
 fi

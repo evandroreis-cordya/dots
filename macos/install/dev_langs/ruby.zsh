@@ -16,7 +16,7 @@ brew_install "ruby-build" "ruby-build"
 
 # Create modular configuration file for Ruby
 create_ruby_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/ruby.zsh"
 
     # Create directory if it doesn't exist
@@ -309,7 +309,7 @@ install_gem "jekyll" "Jekyll"
 create_ruby_config
 
 # Load Ruby configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/ruby.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/ruby.zsh"
 EOL
     print_result $? "Added Ruby configuration to .zshrc"
 fi

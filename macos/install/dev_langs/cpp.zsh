@@ -41,7 +41,7 @@ fi
 
 # Create modular configuration file for C/C++
 create_cpp_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/cpp.zsh"
 
     # Create directory if it doesn't exist
@@ -346,7 +346,7 @@ EOL
 create_cpp_config
 
 # Load C/C++ configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/cpp.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/cpp.zsh"
 EOL
     print_result $? "Added C/C++ configuration to .zshrc"
 fi

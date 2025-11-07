@@ -78,7 +78,7 @@ set_xcode_developer_directory() {
 
 # Create modular configuration file for Xcode
 create_xcode_config() {
-    local config_dir="$HOME/dotfiles/macos/configs/shell/zsh_configs"
+    local config_dir="$HOME/dots/macos/configs/shell/zsh_configs"
     local config_file="$config_dir/xcode.zsh"
 
     # Create directory if it doesn't exist
@@ -284,7 +284,7 @@ main() {
     create_xcode_config
 
 # Load Xcode configuration
-source "$HOME/dotfiles/macos/configs/shell/zsh_configs/xcode.zsh"
+source "$HOME/dots/macos/configs/shell/zsh_configs/xcode.zsh"
 EOL
         print_result $? "Added Xcode configuration to .zshrc"
     fi
