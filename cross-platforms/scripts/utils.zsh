@@ -82,7 +82,7 @@ get_arch() {
 # Function to install package using platform-specific package manager
 install_package() {
     local package="$1"
-    local os="${DOTFILES_OS:-$(get_os)}"
+    local os="${DOTS_OS:-$(get_os)}"
 
     case "$os" in
         macos)
@@ -94,7 +94,7 @@ install_package() {
             fi
             ;;
         linux)
-            local package_manager="${DOTFILES_PACKAGE_MANAGER:-$(detect_package_manager linux)}"
+            local package_manager="${DOTS_PACKAGE_MANAGER:-$(detect_package_manager linux)}"
             case "$package_manager" in
                 apt)
                     sudo apt update && sudo apt install -y "$package"
@@ -242,7 +242,7 @@ get_latest_release() {
 # Function to check if a port is in use
 is_port_in_use() {
     local port="$1"
-    local os="${DOTFILES_OS:-$(get_os)}"
+    local os="${DOTS_OS:-$(get_os)}"
 
     case "$os" in
         macos|linux)
@@ -293,14 +293,14 @@ wait_for_service() {
 
 # Function to get system information
 get_system_info() {
-    local os="${DOTFILES_OS:-$(get_os)}"
-    local arch="${DOTFILES_ARCH:-$(get_arch)}"
+    local os="${DOTS_OS:-$(get_os)}"
+    local arch="${DOTS_ARCH:-$(get_arch)}"
 
     echo "Operating System: $os"
     echo "Architecture: $arch"
-    echo "Shell: ${DOTFILES_SHELL:-$(detect_shell)}"
-    echo "Package Manager: ${DOTFILES_PACKAGE_MANAGER:-$(detect_package_manager "$os")}"
-    echo "Terminal: ${DOTFILES_TERMINAL:-$(detect_terminal)}"
+    echo "Shell: ${DOTS_SHELL:-$(detect_shell)}"
+    echo "Package Manager: ${DOTS_PACKAGE_MANAGER:-$(detect_package_manager "$os")}"
+    echo "Terminal: ${DOTS_TERMINAL:-$(detect_terminal)}"
 
     case "$os" in
         macos)
@@ -329,7 +329,7 @@ stow_installed() {
 
 # Function to install stow
 install_stow() {
-    local os="${DOTFILES_OS:-$(get_os)}"
+    local os="${DOTS_OS:-$(get_os)}"
 
     if stow_installed; then
         if type log_info &>/dev/null; then
@@ -358,7 +358,7 @@ install_stow() {
             fi
             ;;
         linux)
-            local package_manager="${DOTFILES_PACKAGE_MANAGER:-$(detect_package_manager linux)}"
+            local package_manager="${DOTS_PACKAGE_MANAGER:-$(detect_package_manager linux)}"
             case "$package_manager" in
                 apt)
                     if type execute_with_log &>/dev/null; then

@@ -10,7 +10,7 @@ source "${SCRIPT_DIR}/logging.zsh" 2>/dev/null || true
 
 # Repository configuration
 typeset -r GITHUB_REPOSITORY="evandroreis-cordya/dots"
-typeset -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
+typeset -r DOTS_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
 
 # Default configuration
 typeset skipQuestions=false
@@ -104,7 +104,7 @@ download_utils() {
     local tmpFile=""
 
     tmpFile="$(mktemp /tmp/XXXXX)"
-    download "$DOTFILES_UTILS_URL" "$tmpFile" \
+    download "$DOTS_UTILS_URL" "$tmpFile" \
         && source "$tmpFile" \
         && rm -rf "$tmpFile" \
         && return 0

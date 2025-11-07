@@ -526,7 +526,7 @@ configure_oh_my_zsh() {
 
 
 # #==============================================================================
-# # DOTFILES ZSH CONFIGURATION
+# # DOTS ZSH CONFIGURATION
 # #==============================================================================
 # # This is the main .zshrc file that loads all modular configurations from
 # # the dots directory. All specific configurations are organized

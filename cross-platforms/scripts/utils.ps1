@@ -129,7 +129,7 @@ function Install-Package {
             }
         }
         "linux" {
-            $packageManager = $env:DOTFILES_PACKAGE_MANAGER
+            $packageManager = $env:DOTS_PACKAGE_MANAGER
             switch ($packageManager) {
                 "apt" { sudo apt update; sudo apt install -y $Package }
                 "yum" { sudo yum install -y $Package }
@@ -293,9 +293,9 @@ function Get-SystemInfo {
     $info = @{
         "Operating System" = $os
         "Architecture" = $arch
-        "Shell" = $env:DOTFILES_SHELL
-        "Package Manager" = $env:DOTFILES_PACKAGE_MANAGER
-        "Terminal" = $env:DOTFILES_TERMINAL
+        "Shell" = $env:DOTS_SHELL
+        "Package Manager" = $env:DOTS_PACKAGE_MANAGER
+        "Terminal" = $env:DOTS_TERMINAL
     }
 
     switch ($os) {

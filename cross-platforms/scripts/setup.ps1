@@ -9,14 +9,14 @@ param(
 
 # Get the directory of the current script
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$DotfilesDir = "$env:USERPROFILE\dots"
+$DOTSDir = "$env:USERPROFILE\dots"
 
 # Source environment detection
-. "$DotfilesDir\cross-platforms\scripts\os\detect_environment.ps1"
+. "$DOTSDir\cross-platforms\scripts\os\detect_environment.ps1"
 
 # Source utility scripts
-. "$DotfilesDir\cross-platforms\scripts\os\utils.ps1" -ErrorAction SilentlyContinue
-. "$DotfilesDir\cross-platforms\scripts\os\logging.ps1" -ErrorAction SilentlyContinue
+. "$DOTSDir\cross-platforms\scripts\os\utils.ps1" -ErrorAction SilentlyContinue
+. "$DOTSDir\cross-platforms\scripts\os\logging.ps1" -ErrorAction SilentlyContinue
 
 # Log configuration
 Write-LogInfo "Generic setup configuration:"
@@ -24,16 +24,16 @@ Write-LogInfo "  Hostname: $Hostname"
 Write-LogInfo "  Username: $Username"
 Write-LogInfo "  Email: $Email"
 Write-LogInfo "  Directory: $Directory"
-Write-LogInfo "  Detected OS: $env:DOTFILES_OS"
+Write-LogInfo "  Detected OS: $env:DOTS_OS"
 
 # Function to call platform-specific setup
 function Invoke-PlatformSetup {
     param([string]$Platform)
 
     $setupScript = switch ($Platform) {
-        "macos" { "$DotfilesDir\macos\scripts\setup.zsh" }
-        "linux" { "$DotfilesDir\linux\scripts\os\setup.zsh" }
-        "windows" { "$DotfilesDir\windows\scripts\os\setup.ps1" }
+        "macos" { "$DOTSDir\macos\scripts\setup.zsh" }
+        "linux" { "$DOTSDir\linux\scripts\os\setup.zsh" }
+        "windows" { "$DOTSDir\windows\scripts\os\setup.ps1" }
         default {
             Write-Error "Unsupported platform: $Platform"
             Write-LogError "Unsupported platform: $Platform"
@@ -66,29 +66,29 @@ function Main {
     # Display environment information
     Write-Host "`n >> Environment Detection" -ForegroundColor Magenta
     Write-Host "Detected environment:" -ForegroundColor Yellow
-    Write-Host "  OS: $env:DOTFILES_OS" -ForegroundColor Yellow
-    Write-Host "  Shell: $env:DOTFILES_SHELL" -ForegroundColor Yellow
-    Write-Host "  Package Manager: $env:DOTFILES_PACKAGE_MANAGER" -ForegroundColor Yellow
-    Write-Host "  Terminal: $env:DOTFILES_TERMINAL" -ForegroundColor Yellow
+    Write-Host "  OS: $env:DOTS_OS" -ForegroundColor Yellow
+    Write-Host "  Shell: $env:DOTS_SHELL" -ForegroundColor Yellow
+    Write-Host "  Package Manager: $env:DOTS_PACKAGE_MANAGER" -ForegroundColor Yellow
+    Write-Host "  Terminal: $env:DOTS_TERMINAL" -ForegroundColor Yellow
 
     # Verify OS support
-    if ($env:DOTFILES_OS -eq "unknown") {
+    if ($env:DOTS_OS -eq "unknown") {
         Write-Error "Unknown operating system detected. This toolset supports macOS, Linux, and Windows."
         Write-LogError "Unknown operating system detected"
         exit 1
     }
 
     # Call platform-specific setup
-    Write-Host "`n >> Starting platform-specific setup for $env:DOTFILES_OS" -ForegroundColor Magenta
+    Write-Host "`n >> Starting platform-specific setup for $env:DOTS_OS" -ForegroundColor Magenta
 
-    $exitCode = Invoke-PlatformSetup $env:DOTFILES_OS
+    $exitCode = Invoke-PlatformSetup $env:DOTS_OS
 
     if ($exitCode -eq 0) {
-        Write-Success "Setup completed successfully for $env:DOTFILES_OS"
-        Write-LogSuccess "Setup completed successfully for $env:DOTFILES_OS"
+        Write-Success "Setup completed successfully for $env:DOTS_OS"
+        Write-LogSuccess "Setup completed successfully for $env:DOTS_OS"
     } else {
-        Write-Error "Setup failed for $env:DOTFILES_OS with exit code $exitCode"
-        Write-LogError "Setup failed for $env:DOTFILES_OS with exit code $exitCode"
+        Write-Error "Setup failed for $env:DOTS_OS with exit code $exitCode"
+        Write-LogError "Setup failed for $env:DOTS_OS with exit code $exitCode"
     }
 
     return $exitCode

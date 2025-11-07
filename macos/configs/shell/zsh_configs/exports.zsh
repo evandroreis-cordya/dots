@@ -4,8 +4,8 @@
 # This file contains common environment variables not specific to any language or tool
 #
 
-# Dotfiles root directory
-export DOTFILES="$HOME/dots"
+# DOTS root directory
+export DOTS="$HOME/dots"
 
 # Language environment
 export LANG=en_US.UTF-8

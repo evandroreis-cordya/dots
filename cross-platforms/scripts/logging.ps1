@@ -26,12 +26,12 @@ function Initialize-Logging {
     # Add header to log file
     $header = @"
 ========================================================
-  DOTFILES INSTALLATION LOG
+  DOTS INSTALLATION LOG
   Started: $(Get-Date)
   Hostname: $env:COMPUTERNAME
   User: $env:USERNAME
-  OS: $env:DOTFILES_OS
-  Shell: $env:DOTFILES_SHELL
+  OS: $env:DOTS_OS
+  Shell: $env:DOTS_SHELL
 ========================================================
 
 "@
@@ -141,17 +141,17 @@ function Execute-WithLog {
 # Log system information
 function Write-LogSystemInfo {
     Write-LogInfo "System Information:"
-    Write-LogInfo "  OS: $env:DOTFILES_OS"
-    Write-LogInfo "  Architecture: $env:DOTFILES_ARCH"
-    Write-LogInfo "  Shell: $env:DOTFILES_SHELL"
-    Write-LogInfo "  Package Manager: $env:DOTFILES_PACKAGE_MANAGER"
-    Write-LogInfo "  Terminal: $env:DOTFILES_TERMINAL"
+    Write-LogInfo "  OS: $env:DOTS_OS"
+    Write-LogInfo "  Architecture: $env:DOTS_ARCH"
+    Write-LogInfo "  Shell: $env:DOTS_SHELL"
+    Write-LogInfo "  Package Manager: $env:DOTS_PACKAGE_MANAGER"
+    Write-LogInfo "  Terminal: $env:DOTS_TERMINAL"
     Write-LogInfo "  User: $env:USERNAME"
     Write-LogInfo "  Hostname: $env:COMPUTERNAME"
     Write-LogInfo "  Home Directory: $env:USERPROFILE"
 
     # OS-specific system information
-    switch ($env:DOTFILES_OS) {
+    switch ($env:DOTS_OS) {
         "macos" {
             Write-LogInfo "  macOS Version: $(sw_vers -productVersion)"
             Write-LogInfo "  macOS Build: $(sw_vers -buildVersion)"
@@ -175,10 +175,10 @@ function Write-LogSystemInfo {
 # Log environment variables
 function Write-LogEnvironment {
     Write-LogInfo "Environment Variables:"
-    Write-LogInfo "  DOTFILES_OS: $env:DOTFILES_OS"
-    Write-LogInfo "  DOTFILES_SHELL: $env:DOTFILES_SHELL"
-    Write-LogInfo "  DOTFILES_PACKAGE_MANAGER: $env:DOTFILES_PACKAGE_MANAGER"
-    Write-LogInfo "  DOTFILES_TERMINAL: $env:DOTFILES_TERMINAL"
+    Write-LogInfo "  DOTS_OS: $env:DOTS_OS"
+    Write-LogInfo "  DOTS_SHELL: $env:DOTS_SHELL"
+    Write-LogInfo "  DOTS_PACKAGE_MANAGER: $env:DOTS_PACKAGE_MANAGER"
+    Write-LogInfo "  DOTS_TERMINAL: $env:DOTS_TERMINAL"
     Write-LogInfo "  HOSTNAME: $env:HOSTNAME"
     Write-LogInfo "  USERNAME: $env:USERNAME"
     Write-LogInfo "  EMAIL: $env:EMAIL"
@@ -265,7 +265,7 @@ function Finalize-Logging {
         $footer = @"
 
 ========================================================
-  DOTFILES INSTALLATION COMPLETED
+  DOTS INSTALLATION COMPLETED
   Finished: $(Get-Date)
   Total Duration: $((Get-Date) - (Get-Item $script:CURRENT_LOG_FILE).CreationTime).TotalSeconds seconds
 ========================================================

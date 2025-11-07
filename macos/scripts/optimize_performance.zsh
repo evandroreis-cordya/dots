@@ -3,7 +3,7 @@
 # PERFORMANCE OPTIMIZATION SCRIPT
 #==============================================================================
 # This script implements performance improvements and best practices for
-# the macOS dotfiles configuration system
+# the macOS DOTS configuration system
 #
 # Features:
 # - Shell startup time optimization
@@ -348,7 +348,7 @@ implement_logging() {
 # Comprehensive logging system
 export LOG_LEVEL="${LOG_LEVEL:-INFO}"
 export LOG_DIR="$HOME/.logs"
-export LOG_FILE="$LOG_DIR/dotfiles.log"
+export LOG_FILE="$LOG_DIR/DOTS.log"
 
 # Create log directory
 mkdir -p "$LOG_DIR"
