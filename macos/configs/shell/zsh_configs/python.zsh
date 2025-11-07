@@ -124,7 +124,7 @@ activate_uv_venv() {
 # Alias for convenience
 alias uvenv="activate_uv_venv"
 alias uvactivate="activate_uv_venv"
-# Note: 'uva' is used by Oh My Zsh UV plugin for 'uv add', so we use 'uvactivate' instead
+# Note: 'uva' could conflict with 'uv add', so we use 'uvactivate' instead
 
 # Function to automatically activate UV venv when entering a directory
 # Function to automatically activate UV venv when entering a directory

@@ -10,15 +10,15 @@ if [ -f "$DOTFILES/macos/configs/shell/zsh_configs/00_load_order.zsh" ]; then
     # Load all configurations in the optimized order
     load_configs_in_order
 else
-    # Fallback: Load Oh My Zsh first, then everything else
-    if [ -f "$DOTFILES/macos/configs/shell/zsh_configs/ohmyzsh.zsh" ]; then
-        source "$DOTFILES/macos/configs/shell/zsh_configs/ohmyzsh.zsh"
+    # Fallback: Load Starship first, then everything else
+    if [ -f "$DOTFILES/macos/configs/shell/zsh_configs/starship.zsh" ]; then
+        source "$DOTFILES/macos/configs/shell/zsh_configs/starship.zsh"
     fi
 
     # Load all other modular configurations from zsh_configs
     for config_file in "$DOTFILES/macos/configs/shell/zsh_configs/"*.zsh; do
-        # Skip ohmyzsh.zsh and load order as they're already loaded
-        if [[ "$config_file" != *"ohmyzsh.zsh" ]] && \
+        # Skip starship.zsh and load order as they're already loaded
+        if [[ "$config_file" != *"starship.zsh" ]] && \
            [[ "$config_file" != *"00_load_order.zsh" ]] && \
            [[ "$config_file" != *"template.zsh" ]] && \
            [ -f "$config_file" ]; then

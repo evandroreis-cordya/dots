@@ -101,13 +101,34 @@ validate_system_setup() {
     # Check Homebrew
     check_command "brew" "Homebrew"
     
-    # Check Oh My Zsh
-    if [[ -d "$HOME/.oh-my-zsh" ]]; then
-        print_success "Oh My Zsh is installed"
-        log_info "Oh My Zsh is installed"
+    # Check Starship
+    if command -v starship &>/dev/null; then
+        print_success "Starship is installed"
+        log_info "Starship is installed"
     else
-        print_error "Oh My Zsh is not installed"
-        log_error "Oh My Zsh is not installed"
+        print_error "Starship is not installed"
+        log_error "Starship is not installed"
+    fi
+    
+    # Check standalone zsh plugins
+    if [[ -f "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] || \
+       [[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] || \
+       [[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+        print_success "zsh-syntax-highlighting is installed"
+        log_info "zsh-syntax-highlighting is installed"
+    else
+        print_error "zsh-syntax-highlighting is not installed"
+        log_error "zsh-syntax-highlighting is not installed"
+    fi
+    
+    if [[ -f "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] || \
+       [[ -f "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] || \
+       [[ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+        print_success "zsh-autosuggestions is installed"
+        log_info "zsh-autosuggestions is installed"
+    else
+        print_error "zsh-autosuggestions is not installed"
+        log_error "zsh-autosuggestions is not installed"
     fi
     
     # Check Xcode Command Line Tools

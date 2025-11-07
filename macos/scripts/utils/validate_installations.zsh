@@ -45,10 +45,27 @@ check_command "nvim"
 
 # Validate shell setup
 print_in_purple "\n   Shell Setup\n"
-if [ -d "$HOME/.oh-my-zsh" ]; then
-    print_success "Oh My Zsh is installed"
+if command -v starship &>/dev/null; then
+    print_success "Starship is installed"
 else
-    print_error "Oh My Zsh is not installed"
+    print_error "Starship is not installed"
+fi
+
+# Check standalone zsh plugins
+if [[ -f "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] || \
+   [[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] || \
+   [[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+    print_success "zsh-syntax-highlighting is installed"
+else
+    print_error "zsh-syntax-highlighting is not installed"
+fi
+
+if [[ -f "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] || \
+   [[ -f "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] || \
+   [[ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+    print_success "zsh-autosuggestions is installed"
+else
+    print_error "zsh-autosuggestions is not installed"
 fi
 
 # Validate development tools

@@ -7,7 +7,7 @@
 #
 # Loading Order:
 # 1. This file (00_load_order.zsh) - defines the load order
-# 2. ohmyzsh.zsh - Oh My Zsh framework (must load first)
+# 2. starship.zsh - Starship prompt initialization (must load first)
 # 3. exports.zsh - General environment variables
 # 4. Language configurations (alphabetically, but dependencies respected)
 #    - java.zsh (includes SDKMAN, Maven, Gradle)
@@ -41,7 +41,7 @@
 typeset -a ZSH_CONFIG_LOAD_ORDER
 ZSH_CONFIG_LOAD_ORDER=(
     # Framework (must be first)
-    "ohmyzsh.zsh"
+    "starship.zsh"
 
     # General exports
     "exports.zsh"
@@ -131,7 +131,7 @@ load_configs_in_order() {
     done
 
     # Load any remaining .zsh files not in the load order
-    # (except this file, ohmyzsh.zsh, and template.zsh)
+    # (except this file, starship.zsh, and template.zsh)
     for config_path in "$config_dir"/*.zsh; do
         local config_file="${config_path##*/}"
 

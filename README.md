@@ -169,13 +169,13 @@ dots/
 ### Platform-Specific Features
 
 #### macOS
-- **Shell**: Zsh with Oh My Zsh and PowerLevel10k
+- **Shell**: Zsh with Starship prompt
 - **Package Manager**: Homebrew
 - **Terminal**: WezTerm
 - **System Integration**: Xcode tools, App Store apps
 
 #### Linux
-- **Shell**: Zsh with Oh My Zsh and PowerLevel10k (Bash fallback)
+- **Shell**: Zsh with Starship prompt (Bash fallback)
 - **Package Manager**: apt, yum, dnf, pacman, or zypper (auto-detected)
 - **Terminal**: WezTerm
 - **System Integration**: systemd services, Linux-specific tools
@@ -192,7 +192,7 @@ When running the setup script, you can select which groups of tools to install:
 
 | Group | Description |
 |-------|-------------|
-| `system` | System Setup (Xcode, Homebrew, Oh My Zsh) |
+| `system` | System Setup (Xcode, Homebrew, Starship) |
 | `dev_langs` | Development Languages (Python, Node, Ruby, Go, Java, Kotlin, Rust, Swift, PHP, C++) |
 | `data_science` | Data Science Environment |
 | `dev_tools` | Development Tools (Git, Docker, VSCode, JetBrains, Yarn) |
@@ -224,7 +224,7 @@ The dots features a sophisticated configuration management system that ensures o
 
 The system uses `00_load_order.zsh` to control the sequence of configuration file loading:
 
-1. **Framework First**: Oh My Zsh loads first to establish the shell framework
+1. **Framework First**: Starship prompt loads first to establish the shell framework
 2. **Core Exports**: General environment variables are loaded early
 3. **Language Dependencies**: Languages load in dependency order (Java before Kotlin, etc.)
 4. **Tool Configurations**: Development tools load after languages
@@ -254,7 +254,7 @@ All configuration files are stored in `$HOME/dots/macos/configs/shell/zsh_config
 | File | Purpose | Load Order |
 |------|---------|------------|
 | `00_load_order.zsh` | Load order management and conflict detection | 1 |
-| `ohmyzsh.zsh` | Oh My Zsh framework initialization | 2 |
+| `starship.zsh` | Starship prompt initialization | 2 |
 | `exports.zsh` | General environment variables | 3 |
 | `java.zsh` | Java, SDKMAN, Maven, Gradle | 4 |
 | `python.zsh` | Python, pyenv, UV package manager | 5 |
@@ -411,8 +411,8 @@ Below is a comprehensive list of tools installed by the Dots, organized by scrip
 |------|-------------|
 | **Xcode Command Line Tools** | Essential development tools for macOS, including compilers, libraries, and header files required for building software on macOS. |
 | **Homebrew** | The missing package manager for macOS that simplifies the installation of software and tools. |
-| **Oh My Zsh** | A delightful, open source, community-driven framework for managing your Zsh configuration, bundled with thousands of helpful functions, plugins, and themes. |
-| **Zsh Plugins** | Various plugins for Zsh including syntax highlighting, autosuggestions, and completions to enhance your terminal experience. |
+| **Starship** | A minimal, blazing-fast, and infinitely customizable prompt for any shell. Provides fast prompt rendering with extensive customization options. |
+| **Zsh Plugins** | Standalone plugins for Zsh including syntax highlighting, autosuggestions, and completions to enhance your terminal experience. |
 
 ### Development Languages
 
@@ -625,7 +625,7 @@ The dots includes a comprehensive set of installation scripts organized by categ
 |-------|-------------|
 | `xcode.zsh` | Installs Xcode and command line tools |
 | `homebrew.zsh` | Installs Homebrew package manager and core packages |
-| `oh_my_zsh.zsh` | Installs and configures Oh My Zsh with custom themes and plugins |
+| `starship.zsh` | Installs and configures Starship prompt with standalone zsh plugins |
 
 ### Development Languages
 

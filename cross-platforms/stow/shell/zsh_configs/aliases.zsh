@@ -49,7 +49,7 @@ alias yt="youtube-transcript"
 
 # Editor
 alias zshconfig="$EDITOR ~/.zshrc"
-alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias starshipconfig="$EDITOR ~/.config/starship.toml"
 
 # System
 alias ip="curl -s https://ipinfo.io/ip"

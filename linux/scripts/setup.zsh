@@ -40,7 +40,7 @@ fi
 # Ensure we're using zsh associative arrays properly
 typeset -A SCRIPT_GROUPS
 SCRIPT_GROUPS=(
-    "system" "System Setup (xcode, homebrew, oh-my-zsh)"
+    "system" "System Setup (xcode, homebrew, starship)"
     "dev_langs" "Development Languages (python, node, ruby, go, java, kotlin, rust, swift, php, cpp)"
     "data_science" "Data Science Environment"
     "dev_tools" "Development Tools (git, docker, vscode, jetbrains, yarn)"

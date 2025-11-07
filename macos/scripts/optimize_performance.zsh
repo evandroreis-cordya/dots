@@ -51,9 +51,10 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR="code"
 export SHELL="/bin/zsh"
 
-# Load Oh My Zsh (required)
-export ZSH="$HOME/.oh-my-zsh"
-source "$ZSH/oh-my-zsh.sh"
+# Initialize Starship prompt (if available)
+if command -v starship &>/dev/null; then
+    eval "$(starship init zsh)"
+fi
 
 # Load essential configurations only
 source "$HOME/dots/macos/configs/shell/zsh_configs/exports.zsh"
