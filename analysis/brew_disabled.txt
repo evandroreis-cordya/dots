@@ -1,0 +1,8 @@
+brew install --cask appcode  # Developer tool: Appcode IDE
+brew install --cask arduino  # Media tool: Arduino creative app
+brew install --cask imagealpha  # Media tool: Imagealpha creative app
+brew install --cask makehuman  # Media tool: Makehuman creative app
+brew install --cask spectacle  # Window manager
+brew install neofetch  # System info display
+brew install terraform  # Terraform IaC CLI
+brew install tldr  # Simplified man pages

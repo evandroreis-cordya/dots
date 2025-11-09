@@ -1,0 +1,131 @@
+brew install --cask agisoft-metashape  # Media tool: Agisoft Metashape creative app
+brew install --cask ai-security-copilot  # Security app: AI Security Copilot security tool
+brew install --cask artec-studio  # Media tool: Artec Studio studio app
+brew install --cask audiogen  # Media tool: Audiogen creative app
+brew install --cask autopsy  # Security app: Autopsy security app
+brew install --cask blackarch  # Security app: Blackarch security app
+brew install --cask burp-suite-pro  # Security app: Burp Suite Pro security app
+brew install --cask cascadeur  # Media tool: Cascadeur creative app
+brew install --cask cgtrader  # Media tool: Cgtrader creative app
+brew install --cask character-creator  # Media tool: Character Creator creative app
+brew install --cask copy-ai  # Media tool: Copy AI creative app
+brew install --cask corona-renderer  # Media tool: Corona Renderer rendering tool
+brew install --cask crowdstrike  # Security app: Crowdstrike security app
+brew install --cask cryengine  # Media tool: Cryengine creative app
+brew install --cask cybereason  # Security app: Cybereason security app
+brew install --cask d-id  # AI tool: D Id application
+brew install --cask d-id-studio  # Media tool: D Id Studio studio app
+brew install --cask darktrace  # Security app: Darktrace security app
+brew install --cask davinci-resolve  # Media tool: Davinci Resolve creative app
+brew install --cask daz-studio  # Media tool: Daz Studio studio app
+brew install --cask deepfence  # Security app: Deepfence security app
+brew install --cask deepmotion  # Media tool: Deepmotion creative app
+brew install --cask dreamfusion  # Media tool: Dreamfusion creative app
+brew install --cask elastic-security  # Security app: Elastic Security security tool
+brew install --cask elevenlabs  # Media tool: Elevenlabs creative app
+brew install --cask exabeam  # Security app: Exabeam security app
+brew install --cask final-cut-pro  # Media tool: Final Cut Pro creative app
+brew install --cask fooocus  # Media tool: Fooocus creative app
+brew install --cask fortify  # Security app: Fortify security app
+brew install --cask galileo-ai  # Media tool: Galileo AI creative app
+brew install --cask garageband  # Media tool: Garageband creative app
+brew install --cask get3d  # Media tool: Get3d creative app
+brew install --cask ghidra  # Security app: Ghidra security app
+brew install --cask grammarly  # Writing assistant
+brew install --cask houdini  # Creative suite: Houdini creative app
+brew install --cask ida-free  # Security app: Ida Free security app
+brew install --cask instant-3d  # Media tool: Instant 3D creative app
+brew install --cask invoke-ai  # Media tool: Invoke AI creative app
+brew install --cask ipisoft  # Media tool: Ipisoft creative app
+brew install --cask kali-linux  # Security app: Kali Linux security app
+brew install --cask lacework  # Security app: Lacework security app
+brew install --cask logic-pro  # Media tool: Logic Pro creative app
+brew install --cask logrhythm  # Security app: Logrhythm security app
+brew install --cask makerbot-print  # Media tool: Makerbot Print creative app
+brew install --cask megascans-bridge  # Media tool: Megascans Bridge creative app
+brew install --cask meshroom  # Media tool: Meshroom creative app
+brew install --cask midjourney-companion  # AI tool: Midjourney Companion application
+brew install --cask misp  # Security app: Misp security app
+brew install --cask mixamo  # Media tool: Mixamo creative app
+brew install --cask modo  # Media tool: Modo creative app
+brew install --cask motion-library  # Media tool: Motion Library creative app
+brew install --cask murf-studio  # Media tool: Murf Studio studio app
+brew install --cask musicgen  # Media tool: Musicgen creative app
+brew install --cask nerf-studio  # Media tool: Nerf Studio studio app
+brew install --cask netsparker  # Security app: Netsparker security app
+brew install --cask nvidia-omniverse  # Media tool: Nvidia Omniverse creative app
+brew install --cask octane-render  # Media tool: Octane Render rendering tool
+brew install --cask onshape  # Media tool: Onshape creative app
+brew install --cask opencti  # Security app: Opencti security app
+brew install --cask optitrack  # Media tool: Optitrack creative app
+brew install --cask orca-security  # Security app: Orca Security security tool
+brew install --cask otter  # AI tool: Otter application
+brew install --cask p5js  # Media tool: P5js creative app
+brew install --cask parrot-security  # Security app: Parrot Security security tool
+brew install --cask pentestbox  # Security app: Pentestbox security app
+brew install --cask perception-neuron  # Media tool: Perception Neuron creative app
+brew install --cask plask  # Media tool: Plask creative app
+brew install --cask point-e  # Media tool: Point E creative app
+brew install --cask prisma-cloud  # Security app: Prisma Cloud cloud tool
+brew install --cask qradar  # Security app: Qradar security app
+brew install --cask qualys  # Security app: Qualys security app
+brew install --cask quixel-bridge  # Media tool: Quixel Bridge creative app
+brew install --cask raise3d-ideamaker  # Media tool: Raise3d Ideamaker creative app
+brew install --cask reality-capture  # Media tool: Reality Capture creative app
+brew install --cask redshift-render  # Media tool: Redshift Render rendering tool
+brew install --cask rokoko  # Media tool: Rokoko creative app
+brew install --cask scan-to-cad  # Media tool: Scan To Cad CAD tool
+brew install --cask security-code-scan  # Security app: Security Code Scan security tool
+brew install --cask security-scorecard  # Security app: Security Scorecard security tool
+brew install --cask sentinel-one  # Security app: Sentinel One security app
+brew install --cask shap-e  # Media tool: Shap E creative app
+brew install --cask simplify3d  # Media tool: Simplify3d creative app
+brew install --cask sketchfab  # Media tool: Sketchfab creative app
+brew install --cask smart-converter  # Media converter
+brew install --cask snyk  # Security app: Snyk security app
+brew install --cask snyk-container  # Security app: Snyk Container security app
+brew install --cask sonarqube  # Security app: Sonarqube security app
+brew install --cask soundraw  # Media tool: Soundraw creative app
+brew install --cask splunk  # Security app: Splunk security app
+brew install --cask stable-diffusion-ui  # Media tool: Stable Diffusion UI creative app
+brew install --cask tails  # Security app: Tails security app
+brew install --cask threestudio  # Media tool: Threestudio creative app
+brew install --cask tor  # Security app: Tor security app
+brew install --cask turbosquid  # Media tool: Turbosquid creative app
+brew install --cask twistlock  # Security app: Twistlock security app
+brew install --cask uizard  # Media tool: Uizard creative app
+brew install --cask ulysses  # Media tool: Ulysses creative app
+brew install --cask unreal-engine  # Creative suite: Unreal Engine creative app
+brew install --cask v-ray  # Media tool: V Ray creative app
+brew install --cask vectra-ai  # Security app: Vectra AI security app
+brew install --cask veracode  # Security app: Veracode security app
+brew install --cask vicon-shogun  # Media tool: Vicon Shogun creative app
+brew install --cask wiz  # Security app: Wiz security app
+brew install --cask wonder-studio  # Media tool: Wonder Studio studio app
+brew install --cask writesonic  # Media tool: Writesonic creative app
+brew install --cask xmind-zen  # Mind mapping tool
+brew install --cask yubikey-personalization-gui  # YubiKey tool: Yubikey Personalization GUI
+brew install --cask zbrush  # Creative suite: Zbrush creative app
+brew install azure-functions-core-tools@4  # Azure Functions Core Tools
+brew install celery  # Celery task queue
+brew install cuda  # NVIDIA CUDA toolkit
+brew install cuda-tools  # CUDA developer tools
+brew install exa  # Enhanced ls replacement
+brew install ibmcloud-cli  # IBM Cloud CLI
+brew install jazzy  # Swift/Obj-C docs generator
+brew install lldb  # LLVM debugger
+brew install mongodb-community  # MongoDB community server
+brew install nvidia-container-toolkit  # Cloud tool: Nvidia Container Toolkit CLI
+brew install pcsclite  # PC/SC smart card stack
+brew install qdrant/qdrant/qdrant-cli  # Qdrant vector DB CLI
+brew install redis-stack  # Developer tool: Redis Stack tool
+brew install scalpel  # Security app: Scalpel tool
+brew install tar  # Archive utility
+brew install unrar  # RAR extractor
+brew install vault  # Security app: Vault tool
+brew install vercel  # Vercel CLI
+brew install volatility  # Security app: Volatility tool
+brew install weaviate/tap/weaviate-cli  # Developer tool: Weaviate CLI
+brew install wpscan  # Security app: Wpscan tool
+brew install yeti  # Security app: Yeti tool
+brew install yubikey-manager  # YubiKey tool: Yubikey Manager

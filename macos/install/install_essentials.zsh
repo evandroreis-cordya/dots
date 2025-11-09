@@ -21,7 +21,6 @@ formulae=(
   awscli
   azure-cli
   docker
-  terraform
   ffmpeg
 )
 
@@ -57,4 +56,3 @@ for cask in "${casks[@]}"; do
 done
 
 echo "Essential tool installation complete."
-

@@ -1,0 +1,7 @@
+brew install --cask affinity-designer  # Media tool: Affinity Designer creative app
+brew install --cask affinity-photo  # Media tool: Affinity Photo photo tool
+brew install --cask azure-data-studio  # Developer tool: Azure Data Studio studio app
+brew install --cask disk-inventory-x  # Security app: Disk Inventory X security app
+brew install --cask metasploit  # Security app: Metasploit security app
+brew install --cask powershell  # PowerShell terminal
+brew install postgresql  # PostgreSQL 14 database
